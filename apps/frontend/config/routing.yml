@@ -1,0 +1,166 @@
+#####################################################
+### public pages
+
+#foreward to the nls-homepage
+welcome:
+  url:   /
+  class: sfRequestRoute
+  param: { module: public, action: index }
+  requirements:
+    sf_method: [get]
+
+#nls-homepage (not secure)
+nls_welcome:
+  url:  /:sf_culture
+  class: I18NRequestRoute
+  param: { module: public, action: index }
+  requirements:
+    sf_method: [get]
+
+#AGB (not secure)
+agb:
+  url:  /:sf_culture/agb
+  class: I18NRequestRoute
+  param: { module: public, action: agb}
+  requirements:
+    sf_method: [get]
+
+#Contact (not secure)
+contact:
+  url:  /:sf_culture/contact
+  class: I18NRequestRoute
+  param: { module: public, action: contact}
+  requirements:
+    sf_method: [get]
+
+#About/Impressum (not secure)
+about:
+  url:  /:sf_culture/about
+  class: I18NRequestRoute
+  param: { module: public, action: about}
+  requirements:
+    sf_method: [get]
+
+#################################################    
+### sfGuard-Routes
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardForgotPassword, action: password }
+
+#Register(not secure)
+sf_guard_register:
+  url:   /register
+  param: { module: sfGuardRegister, action register}
+  
+#User Settings (secure)
+sf_guard_settings:
+  url:	/:sf_culture/settings
+  class: I18NRequestRoute
+  param: { module: sfGuardSettings, action settings}
+
+#Unregister (secure)
+sf_guard_unregister:
+  url:	/:sf_culture/unregister
+  class: I18NRequestRoute
+  param: { module: sfGuardSettings, action unregister}
+
+#################################################
+### private section
+
+#Home 4-button-page (secure)
+homepage:
+  url:  /:sf_culture/home
+  class: I18NRequestRoute
+  param: { module: private, action: home}
+  requirements:
+    sf_method: [get]
+
+#Request Azine to serve as agency (secure)
+agency:
+  url:  /:sf_culture/agency
+  class: I18NRequestRoute
+  param: { module: private, action: agency}
+  requirements:
+    sf_method: [get]
+
+#################################################
+### Job CRUDL (secure)
+#Job Index (secure)
+jobs:
+  url:  /:sf_culture/jobs
+  class: I18NRequestRoute
+  options: { model: Job, type: list }
+  param: { module: job, action index}
+
+#Job Details (secure)
+job_show:
+  url:  /:sf_culture/job/show/:slug
+  class: sfDoctrineRoute
+  options: { model: Job, type: object }
+  param: { module: job, action: show}
+  requirements:
+    sf_method: [get]
+    
+#Add Job (secure)
+job_new:
+  url:  /:sf_culture/job/new
+  param: { module: job, action: new }
+
+#Edit Job (secure)
+job_update:
+  url:  /:sf_culture/job/update/:slug
+  param: { module: job, action: update }
+
+#Delete Job (secure)
+job_delete:
+  url:  /:sf_culture/job/delete/:slug
+  param: { module: job, action: delete}
+  requirements:
+    sf_method: [post, put]
+
+#Query Jobs & Query Result (secure)
+job_query:
+  url:  /:sf_culture/jobs/search
+  param: { module: job, action: search}
+
+#####################################################
+### Applications (secure)
+#Apply for a Job (secure)
+apply_for_job:
+  url:  /:sf_culture/apply/:slug
+  class: I18NRequestRoute
+  options: { model: Application, type: object }
+  param: { module: application, action: apply}
+
+#Manage Applications (secure)
+manage_applications:
+  url:  /:sf_culture/manageApplications/:slug
+  class: I18NRequestRoute
+  options: { model: Application, type: list }
+  param: { module: application, action: manageApplications}
+  requirements:
+    sf_method: [get, post, put]
+
+#Anonymous Decline Application (secure)
+decline_application:
+  url:  /:sf_culture/declineApplication/:slug
+  class: I18NRequestRoute
+  options: { model: Application, type: object }
+  param: { module: application, action: decline}
+    
+#Reply to application
+answer_to_application:
+  url:  /:sf_culture/reply/:slug
+  class: I18NRequestRoute
+  options: { model: Application, type: object }
+  param: { module: application, action: reply}
+  requirements:
+    sf_method: [post, put]

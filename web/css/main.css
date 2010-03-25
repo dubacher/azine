@@ -1,0 +1,42 @@
+/********************************************************************/
+	/* Allgemein HTML */
+html {
+	color: #333333;
+	background: #FFFFFF;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+	text-align: left
+}
+
+body {
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 14px;
+	padding-bottom: 30px;
+}
+
+#menuDiv{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #ADA8A8;
+}
+
+#menuDiv li{
+	list-style-type: none;
+	float: left;
+	padding-left: 10px;
+}

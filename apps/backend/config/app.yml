@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  .array:
+    languages: 
+      en: en
+      de: de 
+
+  sfLanguageSwitch:
+    flagPath:  /sfLanguageSwitchPlugin/images/flag   # optional if you wanna change the path
+    availableLanguages:
+      de:
+        title: Deutsch
+      en:
+        title: English
+        image: /sfLanguageSwitchPlugin/images/flag/gb.png   # optional if you wanna change the flag
+    

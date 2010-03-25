@@ -1,0 +1,121 @@
+Job:
+  job_0:
+    user_id:            1
+    title:              Software Engineer
+    description:        0Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    SQL, PHP, Lisp
+  job_1:
+    user_id:            2
+    title:              Technical Project Leader
+    description:        1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    PHP, Lisp, WebSphere
+  job_2:
+    user_id:            3
+    title:              Architect
+    description:        2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           canceled
+    required_skills:    Lisp, WebSphere, Oracle
+  job_3:
+    user_id:            1
+    title:              Business Analyst
+    description:        3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    WebSphere, Oracle, DB2
+  job_4:
+    user_id:            2
+    title:              Labbersack
+    description:        4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    Oracle, DB2, OO-Design
+  job_5:
+    user_id:            3
+    title:              Test-Mänäger
+    description:        5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           canceled
+    required_skills:    DB2, OO-Design, Web-Design
+  job_6:
+    user_id:            1
+    title:              Customer-Care
+    description:        6Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    OO-Design, Web-Design, J2EE
+  job_7:
+    user_id:            2
+    title:              Sys-Admin
+    description:        7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    Web-Design, J2EE, Architecture
+  job_8:
+    user_id:            3
+    title:              Software Engineer
+    description:        8Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           canceled
+    required_skills:    J2EE, Architecture, Java
+  job_9:
+    user_id:            1
+    title:              Technical Project Leader
+    description:        9Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    Architecture, Java, SQL
+  job_10:
+    user_id:            2
+    title:              Architect
+    description:        10Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    Java, SQL, PHP
+  job_11:
+    user_id:            3
+    title:              Business Analyst
+    description:        11Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           canceled
+    required_skills:    SQL, PHP, Lisp
+  job_12:
+    user_id:            1
+    title:              Labbersack
+    description:        12Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    PHP, Lisp, WebSphere
+  job_13:
+    user_id:            2
+    title:              Test-Mänäger
+    description:        13Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    Lisp, WebSphere, Oracle
+  job_14:
+    user_id:            3
+    title:              Customer-Care
+    description:        14Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           canceled
+    required_skills:    WebSphere, Oracle, DB2
+  job_15:
+    user_id:            1
+    title:              Sys-Admin
+    description:        15Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    Oracle, DB2, OO-Design
+  job_16:
+    user_id:            2
+    title:              Software Engineer
+    description:        16Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    DB2, OO-Design, Web-Design
+  job_17:
+    user_id:            3
+    title:              Technical Project Leader
+    description:        17Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           canceled
+    required_skills:    OO-Design, Web-Design, J2EE
+  job_18:
+    user_id:            1
+    title:              Architect
+    description:        18Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           open
+    required_skills:    Web-Design, J2EE, Architecture
+  job_19:
+    user_id:            2
+    title:              Business Analyst
+    description:        19Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    JobState:           azined
+    required_skills:    J2EE, Architecture, Java

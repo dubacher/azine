@@ -1,0 +1,77 @@
+The `sfDoctrineGuardExtraPlugin` is a symfony plugin that provides additional
+modules for `sfDoctrineGuardPlugin`.
+
+It gives you the modules `ForgotPassword` and `Register`. The Plugin add a `email_address` column to your `sfGuardUser` model.
+
+# Installation
+
+  * Install the plugin
+
+        symfony plugin:install sfDoctrineGuardExtraPlugin
+
+  * Enable one or more modules in your `settings.yml` (optional).
+  For your frontend application: sfGuardForgotPassword, sfGuardRegister
+
+        all:
+          .settings:
+            enabled_modules:      [default, sfGuardAuth, sfGuardForgotPassword, sfGuardRegister]
+
+  * The sfGuardPlugin automatically registered a route named `password` if the module `sfGuardAuth`
+  is enabled so you must diable this feature define `sf_guard_plugin_routes_register` to false
+  in the `app.yml` configuration file:
+
+        all:
+          sf_guard_plugin:
+            routes_register: false
+
+  * Add the following routing rules to `routing.yml`
+
+        sf_guard_signin:
+          url:   /login
+          param: { module: sfGuardAuth, action: signin }
+
+        sf_guard_signout:
+          url:   /logout
+          param: { module: sfGuardAuth, action: signout }
+
+  * Add method `retrieveByUsernameOrEmailAddress` to get a user by email or username in `lib/model/doctrine/sfDoctrineGuardPlugin/sfGuardUserTable.class` e.q.
+
+        [PHP]
+        public function retrieveByUsernameOrEmailAddress($usernameOrEmail, $isActive = true)
+        {
+          return $this->createQuery('u')
+            ->where('u.username = ? OR u.email_address = ?')
+            ->addWhere('u.is_active = ?')
+            ->fetchOne(array(
+                $usernameOrEmail,
+                $usernameOrEmail,
+                $isActive
+              )
+            );
+        }
+
+  * Add sender email to `app.yml`
+
+        all:
+          sf_guard_extra_plugin:
+            from:   from@domain.de
+
+  * Clear you cache
+
+        symfony cc
+
+# Validators
+
+`sfDoctrineGuardExtraPlugin` comes with a validator that you can use in your modules:
+`sfGuardValidatorUsernameOrEmail`.
+
+This validator is used by the `sfGuardForgotPassword` module to check if user exist for username or email.
+
+# Model
+
+you can deactivate the creation of the `email_address` in your `app.yml`
+
+        all:
+          sf_guard_extra_plugin:
+            schema:
+              add_email_address: false

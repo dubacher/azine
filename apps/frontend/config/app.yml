@@ -1,0 +1,44 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  .array:
+    languages: 
+      en: en
+      de: de 
+      
+  sfLanguageSwitch:
+    flagPath:  /sfLanguageSwitchPlugin/images/flag   # optional if you wanna change the path
+    availableLanguages:
+      de:
+        title: Deutsch
+      en:
+        title: English
+        image: /sfLanguageSwitchPlugin/images/flag/gb.png   # optional if you wanna change the flag
+    
+  sf_guard_extra_plugin_from: no-reply@azine.me
+  sf_guard_plugin_success_signout_url: @welcome
+  
+  upload_dir_name: uploads
+  job_att_upload_dir: jobAttachments
+  
+  
+  .array:
+    job_att_mime_types:
+      text: text/plain
+      doc: 	application/msword
+      jpg:	image/jpeg
+      png:	image/png
+      pdf:	application/pdf
+      rtf:	text/rtf
+      #zip:	application/zip # auch alle OpenDocument Formate
+
+  .array:
+    user_notification_modes:
+      1: instantly
+      2: twice per day
+      3: once per day
+      4: twice per week 
+      5: once per week
+      9: never     
