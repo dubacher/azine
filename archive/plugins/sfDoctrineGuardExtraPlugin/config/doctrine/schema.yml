@@ -1,0 +1,12 @@
+---
+<?php
+$config = sfConfig::get('app_sf_guard_extra_plugin_schema', true);
+if (!(isset($config['add_email_address']) AND $config['add_email_address'] === false)) {
+?>
+sfGuardUser:
+  columns:
+    email_address:
+      type: string(128)
+      notnull: true
+      unique: true
+<?php } ?>

@@ -1,0 +1,720 @@
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:35:44 symfony [info] {sfPatternRouting} Match route "welcome" (/) for / with parameters array (  'module' => 'public',  'action' => 'index',)
+Mar 30 16:35:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:35:44 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:35:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:35:44 symfony [info] {PublicActions} Call "PublicActions->executeIndex()"
+Mar 30 16:35:44 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/indexSuccess.php"
+Mar 30 16:35:44 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:35:44 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:35:44 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:35:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:35:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:35:44 symfony [info] {sfWebDebugLogger} Configuration 48.69 ms (10)
+Mar 30 16:35:44 symfony [info] {sfWebDebugLogger} Factories 86.71 ms (1)
+Mar 30 16:35:44 symfony [info] {sfWebDebugLogger} Action "public/index" 0.08 ms (1)
+Mar 30 16:35:44 symfony [info] {sfWebDebugLogger} View "Success" for "public/index" 17.63 ms (1)
+Mar 30 16:35:44 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.78 ms (1)
+Mar 30 16:35:44 symfony [info] {sfWebResponse} Send content (35377 o)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:35:53 symfony [info] {sfPatternRouting} Match route "welcome" (/) for / with parameters array (  'module' => 'public',  'action' => 'index',)
+Mar 30 16:35:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:35:53 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:35:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:35:53 symfony [info] {PublicActions} Call "PublicActions->executeIndex()"
+Mar 30 16:35:53 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/indexSuccess.php"
+Mar 30 16:35:53 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:35:53 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:35:53 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:35:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:35:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:35:53 symfony [info] {sfWebDebugLogger} Configuration 1.06 ms (9)
+Mar 30 16:35:53 symfony [info] {sfWebDebugLogger} Factories 21.98 ms (1)
+Mar 30 16:35:53 symfony [info] {sfWebDebugLogger} Action "public/index" 0.07 ms (1)
+Mar 30 16:35:53 symfony [info] {sfWebDebugLogger} View "Success" for "public/index" 7.61 ms (1)
+Mar 30 16:35:53 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.77 ms (1)
+Mar 30 16:35:53 symfony [info] {sfWebResponse} Send content (35643 o)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:32 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:36:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:32 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:32 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:36:32 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:36:32 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:32 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:32 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:36:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:32 symfony [info] {sfWebDebugLogger} Configuration 13.00 ms (10)
+Mar 30 16:36:32 symfony [info] {sfWebDebugLogger} Factories 21.35 ms (1)
+Mar 30 16:36:32 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 7.29 ms (1)
+Mar 30 16:36:32 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 12.16 ms (1)
+Mar 30 16:36:32 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:32 symfony [info] {sfWebResponse} Send content (37983 o)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:34 symfony [info] {sfPatternRouting} Match route "sf_guard_register" (/register) for /register with parameters array (  'module' => 'sfGuardRegister',  'action' => 'register',)
+Mar 30 16:36:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:34 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:34 symfony [info] {sfGuardRegisterActions} Call "sfGuardRegisterActions->executeRegister()"
+Mar 30 16:36:34 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardRegister/templates/registerSuccess.php"
+Mar 30 16:36:34 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:34 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:34 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:34 symfony [info] {sfWebDebugLogger} Configuration 12.45 ms (10)
+Mar 30 16:36:34 symfony [info] {sfWebDebugLogger} Factories 21.05 ms (1)
+Mar 30 16:36:34 symfony [info] {sfWebDebugLogger} Action "sfGuardRegister/register" 25.77 ms (1)
+Mar 30 16:36:34 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardRegister/register" 11.32 ms (1)
+Mar 30 16:36:34 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.71 ms (1)
+Mar 30 16:36:34 symfony [info] {sfWebResponse} Send content (38614 o)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:35 symfony [info] {sfPatternRouting} Match route "agb" (/:sf_culture/agb) for /de/agb with parameters array (  'module' => 'public',  'action' => 'agb',  'sf_culture' => 'de',)
+Mar 30 16:36:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:35 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:35 symfony [info] {PublicActions} Call "PublicActions->executeAgb()"
+Mar 30 16:36:35 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/agbSuccess.php"
+Mar 30 16:36:35 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:35 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:35 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:35 symfony [info] {sfWebDebugLogger} Configuration 1.08 ms (9)
+Mar 30 16:36:35 symfony [info] {sfWebDebugLogger} Factories 21.21 ms (1)
+Mar 30 16:36:35 symfony [info] {sfWebDebugLogger} Action "public/agb" 0.07 ms (1)
+Mar 30 16:36:35 symfony [info] {sfWebDebugLogger} View "Success" for "public/agb" 7.19 ms (1)
+Mar 30 16:36:35 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.79 ms (1)
+Mar 30 16:36:35 symfony [info] {sfWebResponse} Send content (36059 o)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:38 symfony [info] {sfPatternRouting} Match route "contact" (/:sf_culture/contact) for /de/contact with parameters array (  'module' => 'public',  'action' => 'contact',  'sf_culture' => 'de',)
+Mar 30 16:36:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:38 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:38 symfony [info] {PublicActions} Call "PublicActions->executeContact()"
+Mar 30 16:36:38 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/contactSuccess.php"
+Mar 30 16:36:38 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:38 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:38 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:38 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (9)
+Mar 30 16:36:38 symfony [info] {sfWebDebugLogger} Factories 21.68 ms (1)
+Mar 30 16:36:38 symfony [info] {sfWebDebugLogger} Action "public/contact" 0.07 ms (1)
+Mar 30 16:36:38 symfony [info] {sfWebDebugLogger} View "Success" for "public/contact" 7.33 ms (1)
+Mar 30 16:36:38 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.77 ms (1)
+Mar 30 16:36:38 symfony [info] {sfWebResponse} Send content (36104 o)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:41 symfony [info] {sfPatternRouting} Match route "about" (/:sf_culture/about) for /de/about with parameters array (  'module' => 'public',  'action' => 'about',  'sf_culture' => 'de',)
+Mar 30 16:36:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:41 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:41 symfony [info] {PublicActions} Call "PublicActions->executeAbout()"
+Mar 30 16:36:41 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/aboutSuccess.php"
+Mar 30 16:36:41 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:41 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:41 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:41 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (9)
+Mar 30 16:36:41 symfony [info] {sfWebDebugLogger} Factories 23.15 ms (1)
+Mar 30 16:36:41 symfony [info] {sfWebDebugLogger} Action "public/about" 0.07 ms (1)
+Mar 30 16:36:41 symfony [info] {sfWebDebugLogger} View "Success" for "public/about" 7.26 ms (1)
+Mar 30 16:36:41 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.77 ms (1)
+Mar 30 16:36:41 symfony [info] {sfWebResponse} Send content (36107 o)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:44 symfony [info] {sfPatternRouting} Match route "contact" (/:sf_culture/contact) for /de/contact with parameters array (  'module' => 'public',  'action' => 'contact',  'sf_culture' => 'de',)
+Mar 30 16:36:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:44 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:44 symfony [info] {PublicActions} Call "PublicActions->executeContact()"
+Mar 30 16:36:44 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/contactSuccess.php"
+Mar 30 16:36:44 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:44 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:44 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:44 symfony [info] {sfWebDebugLogger} Configuration 0.97 ms (9)
+Mar 30 16:36:44 symfony [info] {sfWebDebugLogger} Factories 21.20 ms (1)
+Mar 30 16:36:44 symfony [info] {sfWebDebugLogger} Action "public/contact" 0.07 ms (1)
+Mar 30 16:36:44 symfony [info] {sfWebDebugLogger} View "Success" for "public/contact" 7.12 ms (1)
+Mar 30 16:36:44 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.77 ms (1)
+Mar 30 16:36:44 symfony [info] {sfWebResponse} Send content (36106 o)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Match route "agb" (/:sf_culture/agb) for /de/agb with parameters array (  'module' => 'public',  'action' => 'agb',  'sf_culture' => 'de',)
+Mar 30 16:36:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:46 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:46 symfony [info] {PublicActions} Call "PublicActions->executeAgb()"
+Mar 30 16:36:46 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/agbSuccess.php"
+Mar 30 16:36:46 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:46 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:46 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (9)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Factories 21.11 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Action "public/agb" 0.07 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} View "Success" for "public/agb" 7.20 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.81 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebResponse} Send content (36061 o)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:46 symfony [info] {sfPatternRouting} Match route "sf_guard_register" (/register) for /register with parameters array (  'module' => 'sfGuardRegister',  'action' => 'register',)
+Mar 30 16:36:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:46 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:46 symfony [info] {sfGuardRegisterActions} Call "sfGuardRegisterActions->executeRegister()"
+Mar 30 16:36:46 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardRegister/templates/registerSuccess.php"
+Mar 30 16:36:46 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:46 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:46 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Configuration 1.02 ms (9)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Factories 21.32 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Action "sfGuardRegister/register" 24.86 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardRegister/register" 9.31 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.68 ms (1)
+Mar 30 16:36:46 symfony [info] {sfWebResponse} Send content (38611 o)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:36:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:48 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:48 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:36:48 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:36:48 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:48 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:48 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:36:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Configuration 1.02 ms (9)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Factories 21.41 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 5.07 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.44 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebResponse} Send content (38102 o)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:48 symfony [info] {sfPatternRouting} Match route "sf_guard_register" (/register) for /register with parameters array (  'module' => 'sfGuardRegister',  'action' => 'register',)
+Mar 30 16:36:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:48 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:48 symfony [info] {sfGuardRegisterActions} Call "sfGuardRegisterActions->executeRegister()"
+Mar 30 16:36:48 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardRegister/templates/registerSuccess.php"
+Mar 30 16:36:48 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:48 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:48 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Configuration 1.02 ms (9)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Factories 22.00 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Action "sfGuardRegister/register" 24.94 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardRegister/register" 9.31 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:48 symfony [info] {sfWebResponse} Send content (38610 o)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:50 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:36:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:50 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:50 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:36:50 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:36:50 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:50 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:50 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:36:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:50 symfony [info] {sfWebDebugLogger} Configuration 1.09 ms (9)
+Mar 30 16:36:50 symfony [info] {sfWebDebugLogger} Factories 23.01 ms (1)
+Mar 30 16:36:50 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 5.03 ms (1)
+Mar 30 16:36:50 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.16 ms (1)
+Mar 30 16:36:50 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:50 symfony [info] {sfWebResponse} Send content (38099 o)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:36:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:51 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:51 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:36:51 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:36:51 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:51 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:51 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:36:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:51 symfony [info] {sfWebDebugLogger} Configuration 1.02 ms (9)
+Mar 30 16:36:51 symfony [info] {sfWebDebugLogger} Factories 21.30 ms (1)
+Mar 30 16:36:51 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 5.01 ms (1)
+Mar 30 16:36:51 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.29 ms (1)
+Mar 30 16:36:51 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:51 symfony [info] {sfWebResponse} Send content (38099 o)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Match route "sf_guard_register" (/register) for /register with parameters array (  'module' => 'sfGuardRegister',  'action' => 'register',)
+Mar 30 16:36:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:52 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:52 symfony [info] {sfGuardRegisterActions} Call "sfGuardRegisterActions->executeRegister()"
+Mar 30 16:36:52 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardRegister/templates/registerSuccess.php"
+Mar 30 16:36:52 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:52 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:52 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (9)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Factories 21.05 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Action "sfGuardRegister/register" 24.62 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardRegister/register" 9.29 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.69 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebResponse} Send content (38610 o)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:52 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:36:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:52 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:52 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:36:52 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:36:52 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:52 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:52 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:36:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (9)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Factories 21.15 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 4.99 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.20 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:52 symfony [info] {sfWebResponse} Send content (38102 o)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:53 symfony [info] {sfPatternRouting} Match route "sf_guard_register" (/register) for /register with parameters array (  'module' => 'sfGuardRegister',  'action' => 'register',)
+Mar 30 16:36:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:53 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:53 symfony [info] {sfGuardRegisterActions} Call "sfGuardRegisterActions->executeRegister()"
+Mar 30 16:36:53 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardRegister/templates/registerSuccess.php"
+Mar 30 16:36:53 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:53 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:53 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:53 symfony [info] {sfWebDebugLogger} Configuration 1.06 ms (9)
+Mar 30 16:36:53 symfony [info] {sfWebDebugLogger} Factories 21.14 ms (1)
+Mar 30 16:36:53 symfony [info] {sfWebDebugLogger} Action "sfGuardRegister/register" 25.19 ms (1)
+Mar 30 16:36:53 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardRegister/register" 9.47 ms (1)
+Mar 30 16:36:53 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.69 ms (1)
+Mar 30 16:36:53 symfony [info] {sfWebResponse} Send content (38610 o)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Match route "agb" (/:sf_culture/agb) for /de/agb with parameters array (  'module' => 'public',  'action' => 'agb',  'sf_culture' => 'de',)
+Mar 30 16:36:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:54 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:54 symfony [info] {PublicActions} Call "PublicActions->executeAgb()"
+Mar 30 16:36:54 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/agbSuccess.php"
+Mar 30 16:36:54 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:54 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:54 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Configuration 0.99 ms (9)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Factories 21.22 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Action "public/agb" 0.07 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} View "Success" for "public/agb" 7.06 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.75 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebResponse} Send content (36059 o)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:54 symfony [info] {sfPatternRouting} Match route "contact" (/:sf_culture/contact) for /de/contact with parameters array (  'module' => 'public',  'action' => 'contact',  'sf_culture' => 'de',)
+Mar 30 16:36:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:54 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:54 symfony [info] {PublicActions} Call "PublicActions->executeContact()"
+Mar 30 16:36:54 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/contactSuccess.php"
+Mar 30 16:36:54 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:54 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:54 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Configuration 1.03 ms (9)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Factories 24.07 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Action "public/contact" 0.07 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} View "Success" for "public/contact" 7.82 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.79 ms (1)
+Mar 30 16:36:54 symfony [info] {sfWebResponse} Send content (36104 o)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:56 symfony [info] {sfPatternRouting} Match route "about" (/:sf_culture/about) for /de/about with parameters array (  'module' => 'public',  'action' => 'about',  'sf_culture' => 'de',)
+Mar 30 16:36:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:56 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:56 symfony [info] {PublicActions} Call "PublicActions->executeAbout()"
+Mar 30 16:36:56 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/public/templates/aboutSuccess.php"
+Mar 30 16:36:56 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:56 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:56 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:36:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:56 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (9)
+Mar 30 16:36:56 symfony [info] {sfWebDebugLogger} Factories 21.28 ms (1)
+Mar 30 16:36:56 symfony [info] {sfWebDebugLogger} Action "public/about" 0.07 ms (1)
+Mar 30 16:36:56 symfony [info] {sfWebDebugLogger} View "Success" for "public/about" 7.35 ms (1)
+Mar 30 16:36:56 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.76 ms (1)
+Mar 30 16:36:56 symfony [info] {sfWebResponse} Send content (36107 o)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:36:57 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:36:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:36:57 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:36:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:36:57 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:36:57 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:36:57 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:57 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:36:57 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:36:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:36:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:36:57 symfony [info] {sfWebDebugLogger} Configuration 1.14 ms (9)
+Mar 30 16:36:57 symfony [info] {sfWebDebugLogger} Factories 21.29 ms (1)
+Mar 30 16:36:57 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 5.02 ms (1)
+Mar 30 16:36:57 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.33 ms (1)
+Mar 30 16:36:57 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:36:57 symfony [info] {sfWebResponse} Send content (38102 o)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:37:17 symfony [info] {sfPatternRouting} Match route "sf_guard_password" (/request_password) for /request_password with parameters array (  'module' => 'sfGuardForgotPassword',  'action' => 'password',)
+Mar 30 16:37:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:37:17 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:37:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:37:17 symfony [info] {sfGuardForgotPasswordActions} Call "sfGuardForgotPasswordActions->executePassword()"
+Mar 30 16:37:17 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardForgotPassword/templates/passwordSuccess.php"
+Mar 30 16:37:17 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:17 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:17 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:37:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:37:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:37:17 symfony [info] {sfWebDebugLogger} Configuration 13.72 ms (10)
+Mar 30 16:37:17 symfony [info] {sfWebDebugLogger} Factories 22.93 ms (1)
+Mar 30 16:37:17 symfony [info] {sfWebDebugLogger} Action "sfGuardForgotPassword/password" 3.86 ms (1)
+Mar 30 16:37:17 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardForgotPassword/password" 15.61 ms (1)
+Mar 30 16:37:17 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.71 ms (1)
+Mar 30 16:37:17 symfony [info] {sfWebResponse} Send content (37717 o)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:37:19 symfony [info] {sfPatternRouting} Match route "sf_guard_password" (/request_password) for /request_password with parameters array (  'module' => 'sfGuardForgotPassword',  'action' => 'password',)
+Mar 30 16:37:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:37:19 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:37:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:37:19 symfony [info] {sfGuardForgotPasswordActions} Call "sfGuardForgotPasswordActions->executePassword()"
+Mar 30 16:37:19 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/plugins/sfDoctrineGuardExtraPlugin/modules/sfGuardForgotPassword/templates/passwordSuccess.php"
+Mar 30 16:37:19 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:19 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:19 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:37:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 30 16:37:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:37:19 symfony [info] {sfWebDebugLogger} Configuration 1.07 ms (9)
+Mar 30 16:37:19 symfony [info] {sfWebDebugLogger} Factories 22.26 ms (1)
+Mar 30 16:37:19 symfony [info] {sfWebDebugLogger} Action "sfGuardForgotPassword/password" 4.28 ms (1)
+Mar 30 16:37:19 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardForgotPassword/password" 8.98 ms (1)
+Mar 30 16:37:19 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:37:19 symfony [info] {sfWebResponse} Send content (38244 o)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:37:24 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:37:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:37:24 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:37:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:37:24 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:37:24 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:37:24 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:24 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:24 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:37:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:37:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:37:24 symfony [info] {sfWebDebugLogger} Configuration 1.03 ms (9)
+Mar 30 16:37:24 symfony [info] {sfWebDebugLogger} Factories 21.20 ms (1)
+Mar 30 16:37:24 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 5.10 ms (1)
+Mar 30 16:37:24 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.31 ms (1)
+Mar 30 16:37:24 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.69 ms (1)
+Mar 30 16:37:24 symfony [info] {sfWebResponse} Send content (38099 o)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:37:25 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Mar 30 16:37:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 30 16:37:25 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Mar 30 16:37:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 30 16:37:25 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Mar 30 16:37:25 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/modules/sfGuardAuth/templates/signinSuccess.php"
+Mar 30 16:37:25 symfony [info] {sfPHPView} Decorate content with "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:25 symfony [info] {sfPHPView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/layout.php"
+Mar 30 16:37:25 symfony [info] {sfPartialView} Render "/Users/samuelluscher/Sites/azine/apps/frontend/templates/_menu.php"
+Mar 30 16:37:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Mar 30 16:37:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:37:25 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (9)
+Mar 30 16:37:25 symfony [info] {sfWebDebugLogger} Factories 21.35 ms (1)
+Mar 30 16:37:25 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 4.96 ms (1)
+Mar 30 16:37:25 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 9.19 ms (1)
+Mar 30 16:37:25 symfony [info] {sfWebDebugLogger} Partial "global/_menu" 0.70 ms (1)
+Mar 30 16:37:25 symfony [info] {sfWebResponse} Send content (38099 o)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:38:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:38:00 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/sf/sf_web_debug/images/log.png" (/).
+Mar 30 16:38:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 30 16:38:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:38:00 symfony [info] {sfWebDebugLogger} Configuration 1.34 ms (5)
+Mar 30 16:38:00 symfony [info] {sfWebDebugLogger} Factories 21.24 ms (1)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:38:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:38:08 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/sf/sf_web_debug/images/log.png" (/).
+Mar 30 16:38:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 30 16:38:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:38:08 symfony [info] {sfWebDebugLogger} Configuration 0.57 ms (5)
+Mar 30 16:38:08 symfony [info] {sfWebDebugLogger} Factories 22.62 ms (1)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_password" (/request_password/do)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password_reset_password" (/reset_password/:key/:id)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/register)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_do_register" (/register/do)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_confirm" (/register/confirm/:key/:id)
+Mar 30 16:38:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register_complete" (/register/complete/:id)
+Mar 30 16:38:09 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/sf/sf_web_debug/images/log.png" (/).
+Mar 30 16:38:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 30 16:38:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 30 16:38:09 symfony [info] {sfWebDebugLogger} Configuration 0.57 ms (5)
+Mar 30 16:38:09 symfony [info] {sfWebDebugLogger} Factories 21.71 ms (1)

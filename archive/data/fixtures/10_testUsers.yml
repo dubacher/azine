@@ -1,0 +1,23 @@
+sfGuardUser:
+  busi:
+    username:       dominik
+    password:       test
+    email_address:	dominik@azine.me
+    first_name:		Dominik
+    last_name:		Businger
+    is_super_admin: true
+  dubi:
+    username:       marco
+    password:       test
+    email_address:	marco@azine.me
+    first_name:		Marco
+    last_name:		Dubacher
+    is_super_admin: true
+  ben:
+    username:       ben
+    password:       test
+    email_address:	ben@azine.me
+    first_name:		Ben
+    last_name:		Walther    
+    is_super_admin: true
+    

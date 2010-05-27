@@ -1,0 +1,16 @@
+
+{% extends "html/base.html" %}
+
+{% block title %}
+{{ block.super }}
+Job: {{ job.title }}
+{% endblock %}
+
+{% block content %}
+<h2>{{ job.title }}</h2>
+<p>{{ job.description }}</p>
+<ul>
+	<li><a href="{% url job_index %}">Job list</a></li>
+</ul>
+{% endblock %}
+
