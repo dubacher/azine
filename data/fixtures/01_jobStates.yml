@@ -1,7 +1,0 @@
-JobState:
-  open:
-    name: open
-  azined:
-    name: azined
-  canceled:
-    name: canceled
