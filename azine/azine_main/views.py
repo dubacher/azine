@@ -27,7 +27,6 @@ def job_add(request):
         'form': form
     }
                              
-    # shortcut render_to_response returnt HttpResponse
     return render_to_response('html/azine_main/job/add.html', 
         context_dict, context_instance=RequestContext(request))
     
@@ -45,8 +44,4 @@ def job_detail(request, job_id):
     }
     return render_to_response('html/azine_main/job/detail.html', 
         context_dict, context_instance=RequestContext(request))
-
-    
-def hello_world(request):
-    return HttpResponse('Hello World')
     

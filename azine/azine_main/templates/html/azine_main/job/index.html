@@ -10,8 +10,9 @@
 <table>
 {% for job in jobs %}
 	<tr>
-		<td><a href="{% url job_detail job.pk %}">{{ job.title }}</a></td>
-		<td>{{ job.created }}</td>
+		<td>{{ job.title }}</td>
+		<td>{{ job.description }}</td>
+		<td><a href="{% url job_detail job.pk %}">detail</a></td>		
 	</tr>
 {% endfor %}
 </table>
