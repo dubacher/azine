@@ -80,7 +80,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     
-    'south',
-    
     'azine_main'
+)
+
+LOGIN_REDIRECT_URL = (
+    '/job/index/'
 )
