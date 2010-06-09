@@ -88,3 +88,7 @@ INSTALLED_APPS = (
 LOGIN_REDIRECT_URL = (
     '/job/index/'
 )
+
+LOGIN_URL = (
+    '/login/'
+)

@@ -2,6 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
 
+class UserProfile(models.Model):
+    cv_url = models.URLField()
+    user = models.ForeignKey(User, unique=True)
+
 class JobState(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)
 
