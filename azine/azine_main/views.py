@@ -1,4 +1,5 @@
 from azine_main.models import Job
+from azine_main.models import UserProfile
 from django import forms
 from django.template import Template
 from django.shortcuts import render_to_response, get_object_or_404 
@@ -12,6 +13,12 @@ class JobForm(forms.ModelForm):
     class Meta:
         model = Job
     pass
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+    pass
+
 
 @login_required
 def job_add(request):
@@ -48,4 +55,20 @@ def job_detail(request, job_id):
         'job': get_object_or_404(Job, pk=job_id)
     }
     return render_to_response('html/azine_main/job/detail.html', 
+        context_dict, context_instance=RequestContext(request))
+    
+@login_required
+def user_profile_edit(request):
+    
+    try:
+        profile = request.user.get_profile()
+        form = UserProfileForm(instance=profile)
+    except:
+        form = UserProfileForm()
+    
+    context_dict = {
+        'form' : form
+    }
+    
+    return render_to_response('html/azine_main/user_profile/edit.html',
         context_dict, context_instance=RequestContext(request))
