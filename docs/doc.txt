@@ -15,5 +15,10 @@ python manage.py sql [appname]
 #Start built-in webserver
 python manage.py runserver <port>
 
-Migration Tool:
-- south
+Install Django:
+- Die Django-Installation mit MacPorts installiert soweit ich gesehen habe Django-1.0.0. Dieses unterstützt z.B. csrf nicht...
+  -> Eigene Django installation und ln -s /Users/marco/Documents/workspaces/libs/Django-1.2.1/django django
+
+Installation South
+- South herunterladen 
+- Symlink in /opt/local/lib/python2.5/site-packages e.g. ln -s /Users/marco/Documents/workspaces/libs/south/south south
