@@ -58,17 +58,29 @@ def job_detail(request, job_id):
         context_dict, context_instance=RequestContext(request))
     
 @login_required
-def user_profile_edit(request):
+def user_profile_update(request):
     
-    try:
-        profile = request.user.get_profile()
-        form = UserProfileForm(instance=profile)
-    except:
-        form = UserProfileForm()
+    if request.method == 'POST':
+        try:
+            profile = request.user.get_profile()
+            form = UserProfileForm(request.POST, instance=profile)
+        except:
+            form = UserProfileForm(request.POST)        
+        if form.is_valid():
+            form.save()
+            url = reverse('job_index')
+            return HttpResponseRedirect(url)
+            
+    else:
+        try:
+            profile = request.user.get_profile()
+            form = UserProfileForm(instance=profile)
+        except:
+            form = UserProfileForm()
     
     context_dict = {
         'form' : form
     }
     
-    return render_to_response('html/azine_main/user_profile/edit.html',
+    return render_to_response('html/azine_main/user_profile/update.html',
         context_dict, context_instance=RequestContext(request))

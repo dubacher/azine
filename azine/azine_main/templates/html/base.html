@@ -12,11 +12,19 @@
 <body>
 
 <h1>Azine</h1>
-  
+
+<a href="{% url job_index %}">
+    jobs
+</a
+
+<a href="{% url user_profile_update %}">
+    edit profile
+</a
+
 <a href="{% url django.contrib.auth.views.logout_then_login %}">
     logout
 </a
-  
+
 {% block content %}
 {% endblock %}
 
