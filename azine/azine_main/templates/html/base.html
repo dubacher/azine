@@ -13,17 +13,16 @@
 
 <h1>Azine</h1>
 
-<a href="{% url job_index %}">
-    jobs
-</a
 
-<a href="{% url user_profile_update %}">
-    edit profile
-</a
+<div>
+        <ul>
+                <li><a href="{% url job_index %}">Jobs</a></li>
+                <li><a href="{% url application_index_for_user %}">My Applications</a></li>
+                <li><a href="{% url user_profile_update %}">Edit Profile</a></li>
+                <li><a href="{% url django.contrib.auth.views.logout_then_login %}">Logout</a></li>
+        </ul>
+</div>
 
-<a href="{% url django.contrib.auth.views.logout_then_login %}">
-    logout
-</a
 
 {% block content %}
 {% endblock %}

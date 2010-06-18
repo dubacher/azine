@@ -112,3 +112,11 @@ def application_add(request, job_id):
                              
     return render_to_response('html/azine_main/application/add.html', 
         context_dict, context_instance=RequestContext(request))
+    
+@login_required
+def application_index_for_user(request):
+    context_dict = {
+        'applications': Application.objects.filter(applicant=request.user.id)
+    }
+    return render_to_response('html/azine_main/application/index.html', 
+        context_dict, context_instance=RequestContext(request))    
