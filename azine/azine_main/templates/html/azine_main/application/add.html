@@ -1,0 +1,14 @@
+{% extends "html/base.html" %}
+
+{% block title %}
+{{ block.super }}
+Add a application
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="">
+	{{ form.as_p }} 
+	{% csrf_token %}
+	<input type="submit" value="Submit" />
+</form> 
+{% endblock %}

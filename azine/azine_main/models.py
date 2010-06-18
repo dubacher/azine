@@ -44,8 +44,8 @@ class Application(models.Model):
         (RATE_HOURLY, _('hourly')),
     )
     
-    job = models.ForeignKey(Job)
-    applicant = models.ForeignKey(User)  
+    job = models.ForeignKey(Job, editable=False)
+    applicant = models.ForeignKey(User, editable=False)  
     text = models.TextField(_('application text'), null=False, blank=False) # Bewerbungstext
 
     requested_rate = models.DecimalField(max_digits=6, decimal_places=2) # Rate die der Freelancer will

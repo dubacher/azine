@@ -7,5 +7,6 @@ urlpatterns = patterns('',
     url(r'^job/index/', 'azine_main.views.job_index', name="job_index"),
     url(r'^job/detail/(\d+)/', 'azine_main.views.job_detail', name='job_detail'),
     url(r'^user/update/', 'azine_main.views.user_profile_update', name='user_profile_update'),
+    url(r'^application/add/(\d+)/', 'azine_main.views.application_add', name='application_add'),
 )
 

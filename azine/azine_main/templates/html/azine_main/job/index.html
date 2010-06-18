@@ -12,7 +12,8 @@
 	<tr>
 		<td>{{ job.title }}</td>
 		<td>{{ job.description }}</td>
-		<td><a href="{% url job_detail job.pk %}">detail</a></td>		
+		<td><a href="{% url job_detail job.pk %}">detail</a></td>
+		<td><a href="{% url application_add job.pk %}">apply</a></td>		
 	</tr>
 {% endfor %}
 </table>
