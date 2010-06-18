@@ -96,3 +96,6 @@ LOGIN_URL = (
 AUTH_PROFILE_MODULE = (
    'azine_main.UserProfile'
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+

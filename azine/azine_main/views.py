@@ -8,6 +8,7 @@ from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 
 
 class JobForm(forms.ModelForm):
@@ -100,6 +101,7 @@ def application_add(request, job_id):
             application.job = get_object_or_404(Job, pk=job_id)
             application.applicant = request.user
             application.save()
+            send_mail('New Application', 'New Application added.', 'from@azine.me', ['to@test-user.com'], fail_silently=False)
             url = reverse('job_index')
             return HttpResponseRedirect(url)
             
