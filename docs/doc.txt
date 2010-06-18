@@ -22,3 +22,6 @@ Install Django:
 Installation South
 - South herunterladen 
 - Symlink in /opt/local/lib/python2.5/site-packages e.g. ln -s /Users/marco/Documents/workspaces/libs/south/south south
+
+Cron-Job-Library for Django:
+- http://code.google.com/p/django-cron/
