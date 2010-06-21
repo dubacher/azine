@@ -64,7 +64,7 @@ def job_detail(request, job_id):
         context_dict, context_instance=RequestContext(request))
     
 @login_required
-def user_profile_update(request):
+def user_profile_change(request):
     
     if request.method == 'POST':
         try:
@@ -88,7 +88,7 @@ def user_profile_update(request):
         'form' : form
     }
     
-    return render_to_response('html/azine_main/user_profile/update.html',
+    return render_to_response('html/azine_main/user_profile/change.html',
         context_dict, context_instance=RequestContext(request))
 
 @login_required
