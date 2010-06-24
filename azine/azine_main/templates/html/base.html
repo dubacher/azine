@@ -2,32 +2,41 @@
       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
-<title>{% block title %}Azine – {% endblock %}</title>
-
+    <title>{% block title %}Azine – {% endblock %}</title>
 </head>
 
 <body>
-
-<h1>Azine</h1>
-
-
-<div>
+    <div id="header">
+        <h1>Azine</h1>
+    </div>
+    <div id="nav-main">
         <ul>
-                <li><a href="{% url job_index %}">Jobs</a></li>
-                <li><a href="{% url application_index_for_user %}">My Applications</a></li>
-                <li><a href="{% url user_profile_change %}">Edit Profile</a></li>
-                <li><a href="{% url password_reset %}">Reset Password</a></li>
-                <li><a href="{% url password_change %}">Change Password</a></li>
-                <li><a href="{% url django.contrib.auth.views.logout_then_login %}">Logout</a></li>
+            <li><a href="{% url home %}">Home</a></li>
+            {% if not request.user.is_anonymous %}
+            <li><a href="{% url user_detail request.user.username %}">{{ request.user.username }}</a>
+                <ul>
+                    <li><a href="{% url user_profile_change request.user.username %}">Edit my profile</a></li>
+                    <li><a href="{% url application_index_for_user request.user.username %}">My applications</a></li>
+                    <li><a href="{% url password_change %}">Change password</a></li>
+                    <li><a href="{% url django.contrib.auth.views.logout_then_login %}">Logout</a></li>
+                </ul>
+            </li>
+            {% endif %}
+            <li><a href="{% url job_index %}">Jobs</a></li>
         </ul>
-</div>
-
-
-{% block content %}
-{% endblock %}
-
-</body>
+    </div>
+    <div id="content-main">
+        <h2>{% block heading %}{% endblock %}</h2>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+    </div>
+    <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">…</a></li>
+    </ul>
+    </body>
 </html>
