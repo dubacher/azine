@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+{% load cms_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>{% block title %}Azine – {% endblock %}</title>
+    <title>{% block title %}Azine – {% endblock %}{% page_attribute "title" request.current_page %}</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     </div>
     <div id="nav-main">
         <ul>
-            <li><a href="{% url home %}">Home</a></li>
+            <li><a href="/">Home</a></li>
             {% if not request.user.is_anonymous %}
             <li><a href="{% url user_detail request.user.username %}">{{ request.user.username }}</a>
                 <ul>
@@ -29,6 +29,7 @@
     <div id="content-main">
         <h2>{% block heading %}{% endblock %}</h2>
         {% block content %}
+        {% placeholder "content" %}
         {% endblock %}
     </div>
     <div id="footer">

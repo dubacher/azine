@@ -5,7 +5,6 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = patterns('',
     
-    url(r'^$', 'azine_main.views.tmp_home', name='home'),
     url(r'^login/$', auth_views.login, {'template_name': 'html/azine_main/login/login.html'}),
     url(r'^logout/$', auth_views.logout_then_login, name='logout'),
     url(r'^pwd/reset/$', auth_views.password_reset, name='password_reset'),

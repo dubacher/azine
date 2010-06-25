@@ -6,5 +6,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^', include('azine_main.urls')),
+
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'media'}),
+
+    url(r'^', include('cms.urls')),
 )
 

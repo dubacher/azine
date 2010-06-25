@@ -3,6 +3,7 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 DEV = True
+gettext = lambda s: s
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -28,6 +29,12 @@ TIME_ZONE = 'Europe/Zurich'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('de', gettext('Deutsch')),
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -36,17 +43,17 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = 'media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '_%hz7+t#x4(!savar%!nbpgdi6r*4_lhsfq_5e7o@ctmlxg1r^'
@@ -64,13 +71,23 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n', 
     'django.core.context_processors.media', 
     'django.core.context_processors.request',
+    'cms.context_processors.media',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
+    #'django.middleware.cache.UpdateCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'cms.middleware.multilingual.MultilingualURLMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+
+    'cms.middleware.page.CurrentPageMiddleware', 
+    'cms.middleware.user.CurrentUserMiddleware', 
+    #'cms.middleware.toolbar.ToolbarMiddleware', 
+    'cms.middleware.media.PlaceholderMediaMiddleware',
+
+    #'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 ROOT_URLCONF = 'azine.urls'
@@ -89,8 +106,23 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'south',
-    
+
+    'cms',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.file',
+    'cms.plugins.snippet',
+    'cms.plugins.googlemap',
+    'mptt',
+    'publisher',
+    'menus',
+
     'azine_main'
+)
+
+CMS_TEMPLATES = (
+    ('html/base.html', gettext('default')),
 )
 
 LOGIN_REDIRECT_URL = (
