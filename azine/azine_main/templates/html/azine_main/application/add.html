@@ -1,14 +1,17 @@
 {% extends "html/base.html" %}
+{% load i18n %}
 
 {% block title %}
 {{ block.super }}
-Add a application
+{% trans "Apply for job" %}
 {% endblock %}
+
+{% block heading %}{% trans "Apply for job" %}{% endblock %}
 
 {% block content %}
 <form method="POST" action="">
 	{{ form.as_p }} 
 	{% csrf_token %}
-	<input type="submit" value="Submit" />
+	<input type="submit" value="{% trans "Submit application" %}" />
 </form> 
 {% endblock %}

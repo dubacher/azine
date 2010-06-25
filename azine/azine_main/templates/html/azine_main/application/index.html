@@ -3,8 +3,10 @@
 
 {% block title %}
 {{ block.super }}
-{% trans "Applications" %}
+{% trans "Job applications" %}
 {% endblock %}
+
+{% block heading %}{% trans "Job applications" %}{% endblock %}
 
 {% block content %}
 <table>
@@ -16,4 +18,3 @@
 </table>
 
 {% endblock %}
-
