@@ -1,0 +1,22 @@
+body {
+    font-family: "lucida grande", "lucida sans unicode", tahoma, verdana, arial, sans-serif;
+    font-size: 14px;
+}
+
+ul.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.nav li {
+}
+
+ul.nav {
+    float: none;
+    clear: both;
+}
+
+table td {
+    border: 1px gray solid;
+}

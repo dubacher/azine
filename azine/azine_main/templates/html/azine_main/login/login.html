@@ -1,9 +1,9 @@
 {% extends "html/base.html" %}
+{% load i18n %}
 
 {% block content %}
-
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<p>{% blocktrans %}Your username and password didn't match. Please try again.{% endblocktrans %}</p>
 {% endif %}
 
 <form method="post" action="{% url django.contrib.auth.views.login %}">{% csrf_token %}
@@ -18,13 +18,13 @@
 </tr>
 </table>
 
-<input type="submit" value="login" />
+<input type="submit" value="{% trans "Log in" %}" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
-<ul>
-    <li><a href="#">Sign up</a></li>
-    <li><a href="{% url password_reset %}">Forgot your password?</a></li>
+<ul class="nav">
+    <li><a href="#">{% trans "Sign up" %}</a></li>
+    <li><a href="{% url password_reset %}">{% trans "Forgot your password?" %}</a></li>
 </ul>
 
 {% endblock %}

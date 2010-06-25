@@ -1,25 +1,26 @@
-{% load cms_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+{% load i18n cms_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>{% block title %}Azine – {% endblock %}{% page_attribute "title" request.current_page %}</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}azine_main/css/base.css" />
 </head>
-
 <body>
     <div id="header">
         <h1>Azine</h1>
     </div>
     <div id="nav-main">
-        <ul>
-            <li><a href="/">Home</a></li>
+        <ul class="nav">
+            <li><a href="/">{% trans "Home" %}</a></li>
             {% if not request.user.is_anonymous %}
             <li><a href="{% url user_detail request.user.username %}">{{ request.user.username }}</a>
                 <ul>
-                    <li><a href="{% url user_profile_change request.user.username %}">Edit my profile</a></li>
-                    <li><a href="{% url application_index_for_user request.user.username %}">My applications</a></li>
-                    <li><a href="{% url password_change %}">Change password</a></li>
-                    <li><a href="{% url django.contrib.auth.views.logout_then_login %}">Logout</a></li>
+                    <li><a href="{% url user_profile_change request.user.username %}">{% trans "Edit my profile" %}</a></li>
+                    <li><a href="{% url application_index_for_user request.user.username %}">{% trans "My applications" %}</a></li>
+                    <li><a href="{% url password_change %}">{% trans "Change password" %}</a></li>
+                    <li><a href="{% url django.contrib.auth.views.logout_then_login %}">{% trans "Log out" %}</a></li>
                 </ul>
             </li>
             {% endif %}
@@ -34,7 +35,7 @@
     </div>
     <div id="footer">
     </div>
-    <ul>
+    <ul class="nav">
         <li><a href="#">Terms of Service</a></li>
         <li><a href="#">Disclaimer</a></li>
         <li><a href="#">…</a></li>

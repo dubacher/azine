@@ -6,20 +6,26 @@
 {% trans "Jobs" %}
 {% endblock %}
 
+{% block heading %}{% trans "Jobs" %}{% endblock %}
+
 {% block content %}
 <table>
 {% for job in jobs %}
-	<tr>
-		<td>{{ job.title }}</td>
-		<td>{{ job.description }}</td>
-		<td><a href="{% url job_detail job.pk %}">detail</a></td>
-		<td><a href="{% url job_apply job.pk %}">apply</a></td>		
-	</tr>
+    <tr>
+        <td>{{ job.title }}</td>
+        <td>{{ job.description }}</td>
+        <td>
+            <ul class="nav">
+                <li><a href="{% url job_detail job.pk %}">{% trans "View details" %}</a></li>
+                <li><a href="{% url job_apply job.pk %}">{% trans "Apply for job" %}</a></li>
+            </ul>
+        </td>
+    </tr>
 {% endfor %}
 </table>
 
-<ul>
-	<li><a href="{% url job_add %}">Add new job</a></li>
+<ul class="nav">
+    <li><a href="{% url job_add %}">Add new job</a></li>
 </ul>
 {% endblock %}
 
