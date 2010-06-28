@@ -14,7 +14,7 @@
     <tr>
         <td>{{ job.title }}</td>
         <td>{{ job.description }}</td>
-        <td>
+        <td class="nav">
             <ul class="nav">
                 <li><a href="{% url job_detail job.pk %}">{% trans "View details" %}</a></li>
                 <li><a href="{% url job_apply job.pk %}">{% trans "Apply for job" %}</a></li>

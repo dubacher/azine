@@ -1,44 +1,139 @@
-{% load i18n cms_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+{% load i18n cms_tags %}<!DOCTYPE html>
+<html xml:lang="en" lang="en">
 <head>
-    <title>{% block title %}Azine – {% endblock %}{% page_attribute "title" request.current_page %}</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}azine_main/css/base.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{% block title %}Azine – {% endblock %}{% page_attribute "title" request.current_page %}</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}azine_main/css/base.css" />
+
+<link href="{{ MEDIA_URL }}azine_main/css/my_layout.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 7]>
+<link href="css/patches/patch_my_layout.css" rel="stylesheet" type="text/css" />
+<![endif]-->
 </head>
 <body>
-    <div id="header">
-        <h1>Azine</h1>
-    </div>
-    <div id="nav-main">
-        <ul class="nav">
-            <li><a href="/">{% trans "Home" %}</a></li>
-            {% if not request.user.is_anonymous %}
-            <li><a href="{% url user_detail request.user.username %}">{{ request.user.username }}</a>
-                <ul>
-                    <li><a href="{% url user_profile_change request.user.username %}">{% trans "Edit my profile" %}</a></li>
-                    <li><a href="{% url application_index_for_user request.user.username %}">{% trans "My applications" %}</a></li>
-                    <li><a href="{% url password_change %}">{% trans "Change password" %}</a></li>
-                    <li><a href="{% url django.contrib.auth.views.logout_then_login %}">{% trans "Log out" %}</a></li>
+<!-- skip link navigation -->
+<ul id="skiplinks">
+    <li><a class="skip" href="#nav">Skip to navigation (Press Enter).</a></li>
+    <li><a class="skip" href="#col3">Skip to main content (Press Enter).</a></li>
+</ul>
+
+<div class="page_margins">
+    <div class="page">
+        <div id="header" role="banner">
+            <!--
+            <div id="topnav" role="contentinfo">
+                <span><a href="#">Login</a> | <a href="#">Contact</a> | <a href="#">Imprint</a></span> 
+            </div>
+            -->
+            <h1><a href="/"><img src="{{ MEDIA_URL }}azine_main/img/azine-logo-header.png"></a></h1>
+            <!-- begin: main navigation #nav -->
+            <div id="nav-main"  role="navigation">
+                <ul class="nav">
+                    <!--<li><a href="/">{% trans "Home" %}</a></li>-->
+                    <li class="active"><a href="{% url job_index %}">Jobs</a></li>
+                    {% if not request.user.is_anonymous %}
+                    <li><a href="{% url user_detail request.user.username %}">{{ request.user.username }}</a>
+                        <ul>
+                            <li><a href="{% url user_profile_change request.user.username %}">{% trans "Edit my profile" %}</a></li>
+                            <li><a href="{% url application_index_for_user request.user.username %}">{% trans "My applications" %}</a></li>
+                            <li><a href="{% url password_change %}">{% trans "Change password" %}</a></li>
+                            <li><a href="{% url django.contrib.auth.views.logout_then_login %}">{% trans "Log out" %}</a></li>
+                        </ul>
+                    </li>
+                    {% else %}
+                    <li><a href="{% url login %}">{% trans "Sign up" %}</a>
+                    {% endif %}
                 </ul>
-            </li>
-            {% endif %}
-            <li><a href="{% url job_index %}">Jobs</a></li>
-        </ul>
+            </div>
+            <!-- end: main navigation -->
+        </div>
+        <!-- begin: main content area #main -->
+        <div id="main">
+            <!-- begin: #col1 - first float column -->
+            <div id="col1" role="complementary">
+                <div id="col1_content" class="clearfix">
+                    <h2>Some content here</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   </p>
+                    <h3>Lorem ipsum ... </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam malesuada   suscipit pede. Nullam ipsum lacus, varius vel, nonummy in, consequat ut, neque.   Vivamus viverra. Duis dolor arcu, lacinia sit amet, sollicitudin sed, aliquet   vel, quam. Pellentesque molestie laoreet tortor. Aenean quam. Pellentesque magna   metus, venenatis sit amet, congue nec, dictum in, est. Aliquam nibh. </p>
+                </div>
+            </div>
+            <!-- end: #col1 -->
+            <!-- begin: #col2 second float column -->
+            <div id="col2" role="complementary">
+                <div id="col2_content" class="clearfix">
+                    <h2>Latest jobs</h2>
+                    <table style="width: 100%" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td>Foo Bar in Genf</td
+                                <td><ul class="nav"><li><a href="#">Details</a></li></ul></td
+                            </tr>
+                            <tr>
+                                <td>Blarz in Zürich</td
+                                <td><ul class="nav"><li><a href="#">Details</a></li></ul></td
+                            </tr>
+                            <tr>
+                                <td>Jabba jabba in Olten</td
+                                <td><ul class="nav"><li><a href="#">Details</a></li></ul></td
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 style="margin-top: 2em">Breaking news</h2>
+                    <table style="width: 100%" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td>Azine mentioned in Forbes Magazine</td
+                                <td><ul class="nav"><li><a href="#">Details</a></li></ul></td
+                            </tr>
+                            <tr>
+                                <td>2<sup>10th</sup> Aziner signed up</td
+                                <td><ul class="nav"><li><a href="#">Details</a></li></ul></td
+                            </tr>
+                            <tr>
+                                <td>Download the new iPhone app (duh)</td
+                                <td><ul class="nav"><li><a href="#">Details</a></li></ul></td
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end: #col2 -->
+            <!-- begin: #col3 static column -->
+            <div id="col3" role="main">
+                <div id="col3_content" class="clearfix">
+
+                    <div id="content-main">
+                        <h2>{% block heading %}{% endblock %}</h2>
+                        {% block content %}
+                        {% placeholder "content" %}
+                        {% endblock %}
+                    </div>
+
+                </div>
+                <div id="ie_clearing">&nbsp;</div>
+                <!-- End: IE Column Clearing -->
+            </div>
+            <!-- end: #col3 -->
+        </div>
+        <!-- end: #main -->
+        <!-- begin: #footer -->
+        <div id="footer" role="contentinfo">
+            <p>
+            © 2010 azine GmbH
+            </p>
+            <ul class="nav">
+                <li><a href="#">Help/FAQ</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!-- end: #footer -->
     </div>
-    <div id="content-main">
-        <h2>{% block heading %}{% endblock %}</h2>
-        {% block content %}
-        {% placeholder "content" %}
-        {% endblock %}
-    </div>
-    <div id="footer">
-    </div>
-    <ul class="nav">
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#">…</a></li>
-    </ul>
-    </body>
+</div>
+<!-- full skip link functionality in webkit browsers -->
+<script src="./yaml/core/js/yaml-focusfix.js" type="text/javascript"></script>
+</body>
 </html>
