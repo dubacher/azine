@@ -2,9 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
 
+
 class UserProfile(models.Model):
-    cv_url = models.URLField()
     user = models.ForeignKey(User, unique=True)
+    first_name = models.CharField(_('first_name'), max_length=255, null=True, blank=False)
+    last_name = models.CharField(_('last_name'), max_length=255, null=False, blank=False)
+    signup_date = models.DateField(null=False, blank=False)
+    ip_address = models.CharField(_('ip_address'), max_length=255, null=False, blank=False)
+    cv_url = models.URLField()
+
 
 class JobState(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)
@@ -54,4 +60,7 @@ class Application(models.Model):
     # cv_attachment: { type: blob } # Blob mit allfaelligem CV-Attachment.
 
     def __unicode__(self):
-        return ugettext('%(user)s applied for %(job)s' % {'user': self.applicant.__unicode__(), 'job': self.job.__unicode__()}) 
+        return ugettext('%(user)s applied for %(job)s' % {'user': self.applicant.__unicode__(), 'job': self.job.__unicode__()})
+        
+
+
