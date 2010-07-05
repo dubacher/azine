@@ -22,9 +22,7 @@ def signup(request):
             new_user = User.objects.create_user(request.POST['last_name'], request.POST['email_address'], password=None)
             user_profile = UserProfile(user=new_user, first_name = request.POST['first_name'], last_name = request.POST['last_name'], ip_address = request.get_host(), signup_date = datetime.datetime.now())
             user_profile.save()
-            
-            return render_to_response('html/azine_main/signup/signup_successful.html', context_instance=RequestContext(request))
-            
+            return render_to_response('html/azine_main/signup/signup_successful.html', context_instance=RequestContext(request))            
     else:
         form = SignupForm()
         
