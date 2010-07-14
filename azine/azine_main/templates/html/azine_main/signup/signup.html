@@ -1,9 +1,6 @@
-{% extends "html/base.html" %}
 {% load i18n %}
 
-{% block content %}
-
-<form method="post" action="">{% csrf_token %}
+<form id="signupForm" method="post" action="">{% csrf_token %}
 
 <table>
 <tr>
@@ -23,10 +20,5 @@
 </tr>
 </table>
 
-<input type="submit" value="{% trans "Sign up" %}" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
-
-
-{% endblock %}
-
