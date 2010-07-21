@@ -11,6 +11,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'azine'             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
@@ -43,7 +45,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
