@@ -1,4 +1,5 @@
 # Django settings for azine project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
