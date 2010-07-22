@@ -1,9 +1,10 @@
 # Django settings for azine project.
-import os
-
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+import socket, os
+#DEV = socket.gethostname() in ('sam-imac.local', 'your-host-here')
 DEV = True
+
+DEBUG = DEV
+TEMPLATE_DEBUG = DEBUG
 gettext = lambda s: s
 
 ADMINS = (
@@ -85,6 +86,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
 
+    'azine_main.middleware.redirect.UrlRedirectMiddleware',
+
     'cms.middleware.page.CurrentPageMiddleware', 
     'cms.middleware.user.CurrentUserMiddleware', 
     #'cms.middleware.toolbar.ToolbarMiddleware', 
@@ -141,4 +144,11 @@ AUTH_PROFILE_MODULE = (
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# UrlRedirectMiddleware
+
+URL_REDIRECTS = (
+    (r'^azine\.me/(.*)$', 'http://www.azine.me/\1'),
+    (r'^(www\.)?azine\.ch/(.*)$', 'http://www.azine.me/\1'),
+)
 
