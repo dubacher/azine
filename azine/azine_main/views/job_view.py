@@ -8,7 +8,6 @@ from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.core.mail import send_mail
 from django.contrib import messages
 
 class JobForm(forms.ModelForm):
