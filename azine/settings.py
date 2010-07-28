@@ -84,7 +84,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-
+    'django.contrib.messages.middleware.MessageMiddleware',
+    
     'azine_main.middleware.redirect.UrlRedirectMiddleware',
 
     'cms.middleware.page.CurrentPageMiddleware', 
@@ -101,6 +102,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, 'persistent_messages/templates'),
 )
 
 INSTALLED_APPS = (
@@ -157,3 +159,4 @@ URL_REDIRECTS = (
     (r'^(www\.)?azine\.ch/(.*)$', 'http://www.azine.me/\1'),
 )
 
+MESSAGE_STORAGE = 'persistent_messages.storage.PersistentMessageStorage'

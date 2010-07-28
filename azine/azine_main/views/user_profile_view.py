@@ -10,6 +10,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response, get_object_or_404 
 from django.core.exceptions import PermissionDenied
+from django.contrib import messages
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
@@ -37,8 +38,8 @@ def change(request, username):
             form = UserProfileForm(request.POST)        
         if form.is_valid():
             form.save()
+            messages.add_message(request, messages.INFO, _('Your changes were saved.'))
             return HttpResponseRedirect(reverse('user_detail', args=[request.user.username,]))
-            
     else:
         try:
             profile = request.user.get_profile()

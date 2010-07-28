@@ -11,6 +11,8 @@ urlpatterns = patterns('',
     (r'^googlehostedservice\.html$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'path': 'googlehostedservice.html'}),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
+    (r'^messages/', include('persistent_messages.urls')),
+
     url(r'^', include('cms.urls')),
 )
 

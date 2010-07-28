@@ -9,6 +9,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.contrib import messages
 
 class JobForm(forms.ModelForm):
     class Meta:
@@ -65,7 +66,7 @@ def apply(request, job_id):
             application.job = get_object_or_404(Job, pk=job_id)
             application.applicant = request.user
             application.save()
-            send_mail('New Application', 'New Application added.', 'from@azine.me', ['to@test-user.com'], fail_silently=False)
+            persistent_messages.add_message(request, persistent_messages.INFO, _('Blah'), subject=_('Your application was added'), email=True)
             url = reverse('job_index')
             return HttpResponseRedirect(url)
     else:
