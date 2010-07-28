@@ -4,3 +4,6 @@
 [submodule "django-persistent-messages"]
 	path = django-persistent-messages
 	url = git://github.com/philomat/django-persistent-messages.git
+[submodule "django-cms-columns"]
+	path = django-cms-columns
+	url = git://github.com/philomat/django-cms-columns.git
