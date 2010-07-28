@@ -1,8 +1,10 @@
 # Django settings for azine project.
-
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+import socket, os
+#DEV = socket.gethostname() in ('sam-imac.local', 'your-host-here')
 DEV = True
+
+DEBUG = DEV
+TEMPLATE_DEBUG = DEBUG
 gettext = lambda s: s
 
 ADMINS = (
@@ -11,8 +13,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'azine'             # Or path to database file if using sqlite3.
+DATABASE_NAME = os.path.join(PROJECT_PATH, 'azine')             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -43,7 +47,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -81,6 +85,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+
+    'azine_main.middleware.redirect.UrlRedirectMiddleware',
 
     'cms.middleware.page.CurrentPageMiddleware', 
     'cms.middleware.user.CurrentUserMiddleware', 
@@ -138,4 +144,11 @@ AUTH_PROFILE_MODULE = (
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# UrlRedirectMiddleware
+
+URL_REDIRECTS = (
+    (r'^azine\.me/(.*)$', 'http://www.azine.me/\1'),
+    (r'^(www\.)?azine\.ch/(.*)$', 'http://www.azine.me/\1'),
+)
 
