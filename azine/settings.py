@@ -123,6 +123,9 @@ INSTALLED_APPS = (
     'publisher',
     'menus',
 
+    'cms_columns',
+    'persistent_messages',
+
     'azine_main'
 )
 
@@ -130,6 +133,9 @@ CMS_TEMPLATES = (
     ('html/base.html', gettext('default')),
 )
 
+CMS_PLUGIN_PROCESSORS = (
+    'cms_columns.cms_plugin_processors.columns',
+)
 LOGIN_REDIRECT_URL = (
     '/job/index/'
 )
