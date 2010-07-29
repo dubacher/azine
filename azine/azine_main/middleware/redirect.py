@@ -20,8 +20,6 @@ class UrlRedirectMiddleware:
     """
     def process_request(self, request):
         host = request.META['HTTP_HOST'] + request.META['PATH_INFO']
-        import logging
-        #raise Exception(host)
         for url_pattern, redirect_url in settings.URL_REDIRECTS:
             regex = re.compile(url_pattern)
             if regex.match(host):
