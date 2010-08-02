@@ -90,7 +90,7 @@ MIDDLEWARE_CLASSES = (
 
     'cms.middleware.page.CurrentPageMiddleware', 
     'cms.middleware.user.CurrentUserMiddleware', 
-    #'cms.middleware.toolbar.ToolbarMiddleware', 
+    'cms.middleware.toolbar.ToolbarMiddleware', 
     'cms.middleware.media.PlaceholderMediaMiddleware',
 
     #'django.middleware.cache.FetchFromCacheMiddleware',
@@ -112,7 +112,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
 
-    'south',
+    #'south',
 
     'cms',
     'cms.plugins.text',
