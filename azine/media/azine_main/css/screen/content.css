@@ -18,321 +18,480 @@
 
 @media all
 {
- /**
-  * Fonts
-  *
-  * (en) global settings of font-families and font-sizes
-  * (de) Globale Einstellungen für Zeichensatz und Schriftgrößen
-  *
-  * @section content-global-settings
-  */
-
-  /* (en) reset font size for all elements to standard (16 Pixel) */
-  /* (de) Alle Schriftgrößen auf Standardgröße (16 Pixel) zurücksetzen */
-  html * { font-size:100.01%; }
-
- /**
-  * (en) reset monospaced elements to font size 16px in all browsers
-  * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
-  *
-  * @see: http://webkit.org/blog/67/strange-medium/
-  */
-
-  textarea, pre, code, kbd, samp, var, tt {
-    font-family:Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
-  }
-
-  /* (en) base layout gets standard font size 12px */
-  /* (de) Basis-Layout erhält Standardschriftgröße von 12 Pixeln */
-  body {
-    font-size:75.00%;
-    color:#444;
-  }
-
-  /*--- Headings | Überschriften ------------------------------------------------------------------------*/
-
-  h2,h3,h4,h5,h6 {
-    font-weight:normal;
-    color:#222;
-    line-height: 40px;
-  }
-  
-  h1 {
-      margin:0 0 0.25em 0;
-  }
-
-
-  h1 { font-size:250%; }                       /* 30px */
-  h2 { font-size:200%; }                       /* 24px */
-  #col1 h2, #col2 h2 {
-      font-size:150%;
-  }
-
-  h3 { font-size:150%; }                       /* 18px */
-  h4 { font-size:133.33%; }                    /* 16px */
-  h5 { font-size:116.67%; }                    /* 14px */
-  h6 { font-size:116.67%; }                    /* 14px */
-
-  /* --- Lists | Listen  -------------------------------------------------------------------------------- */
-
-  ul, ol, dl { line-height:1.5em; margin:0 0 1em 1em; }
-  ul { list-style-type:disc; }
-  ul ul { list-style-type:circle; margin-bottom:0; }
-
-  ol { list-style-type:decimal; }
-  ol ol { list-style-type:lower-latin; margin-bottom:0; }
-
-  li { margin-left:0.8em; line-height:1.5em; }
-
-  dt { font-weight:bold; }
-  dd { margin:0 0 1em 0.8em; }
-
-  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
-
-  p { line-height:1.5em; margin:0 0 1em 0; }
-
-  blockquote, cite, q {
-    font-style:italic;
-  }
-  blockquote { margin:0 0 1em 1.6em; color:#666; }
-
-  strong,b { font-weight:bold; }
-  em,i { font-style:italic; }
-
-  big { font-size:116.667%; }
-  small { font-size:91.667%; }
- 
-  pre { line-height:1.5em; margin:0 0 1em 0; }
-  pre, code, kbd, tt, samp, var { font-size:100%; }
-  pre, code { color:#efefef; }
-  kbd, samp, var, tt { color:#666; font-weight:bold; }
-  var, dfn { font-style:italic; }
-
-  acronym, abbr {
-    border-bottom:1px #aaa dotted;
-    font-variant:small-caps;
-    letter-spacing:.07em;
-    cursor:help;
-  }
-
-  sub, sup { font-size:91.6667%; line-height:0; }
-
-  hr {
-    color:#fff;
-    background:transparent;
-    margin:0 0 0.5em 0;
-    padding:0 0 0.5em 0;
-    border:0;
-    border-bottom:1px #eee solid;
-  }
-
-  /*--- Links ----------------------------------------------------------------------------------------- */
-
-  a { color: #4D87C7; background:transparent; text-decoration:none; }
-  a:visited  { color:#036; }
-
-  /* (en) maximum constrast for tab focus - change with great care */
-  /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
-  a:focus { text-decoration:underline; color:#000; }
-  a:hover,
-  a:active { color:#182E7A; text-decoration:underline; outline: 0 none; }
-
-  /* --- images (with optional captions) | Bilder (mit optionaler Bildunterschrift) ------------------ */
+    /*
+    General text
+    */
+
+    a, a:hover, a:visited {
+    	color: #b4c739;
+    	text-decoration: none;
+    }
+
+    #footer a, #footer a:hover, #footer a:visited {
+    }
+
+    #footer, #header {
+    	font-size: 13px;
+    }
+
+    .subcolumns div {
+    /*	overflow: hidden;*/
+    }
+
+    h1 {
+    	font-size: 1.6em;
+    	font-weight: bold;
+    }
+
+    h2 {
+    	font-size: 1.4em;
+    	font-weight: bold;
+    }
+
+    .content-img {
+    	margin-top: 0px;
+    }
+
+    .small-text {
+    	font-size: .9em;
+    }
+
+    ul, ol, dl {
+    	margin: 0 0;
+    	padding-left: .25em;
+    }
+
+    table {
+    	cell-padding: 0;
+    	cell-spacing: 0;
+    	border: none;
+    }
+
+    .row1 td, .row2 td, .row1 th, .row2 th {
+    	padding-left: 9px;
+    	vertical-align: top;
+    }
+
+    .row1 td.last, .row2 td.last, .row1 th.last, .row2 th.last {
+    	text-align: right;
+    }
+
+    .row1 td.first, .row2 td.first, .row1 th.first, .row2 th.first {
+    	padding-left: 0;
+    }
+
+    .row1 td, .row1 th {
+    	background-color: #f7f8fa;
+    }
+
+    .row2 td, .row2 th {
+    	background-color: #e4eaf1;
+    }
+
+    td.td75 {
+    	width: 75%;
+    }
+
+    td.td50 {
+    	width: 50%;
+    }
+
+    td.td25 {
+    	width: 25%;
+    }
+
+    td.td12 {
+    	width: 12%;
+    }
+
+    #col3 p {
+    }
+
+    .date, .time {
+    	color: #b0b0b0;
+    }
+
+    td.date, td.time, td.actions {
+    	white-space: nowrap;
+    }
+
+    td.price {
+    	text-align: right;
+    	font-weight: bold;
+    }
+
+    /* 
+    Creating a baseline grid: 
+    1. Define a base font size.
+    */
+
+    body, textarea, input, .size-m {
+    	font-family: Helvetica, Arial;
+    	font-size: 13px;
+    	color: #333333;
+    }
+
+    body.size-xl, .size-xl, .size-xl textarea, .size-xl input {
+    	font-size: 15px;
+    }
+
+    body.size-xxl, .size-xxl, .size-xxl textarea, .size-xxl input {
+    	font-size: 18px;
+    }
+
+    /*
+    2. Define a line height that will be used at all font sizes.
+       This is the height of the baseline grid.
+    */
+
+    body, li, h1, h2, h3, h4, h5, textarea, input {
+    	line-height: 18px; /* baseline grid */
+    }
+
+    /*
+    3. Make sure the vertical spacing of all elements on the page
+       corresponds to this baseline grid height.
+    */
+
+    h1, h2, h3, h4, p, ul, ol, #col3_content table {
+    	margin-bottom: 18px; /* baseline grid */
+    }
+
+    #col3_content ul ul, #col3_content li li {
+        margin-bottom: 0;
+    }
+
+    #col3_content {
+    	padding-top: 18px; 
+    }
+
+    #nav {
+    	margin-top: 18px; /* baseline grid */
+    	margin-bottom: 54px; /* baseline grid */
+    }
+
+    .subcl, .subcr {
+    /*	padding-bottom: 18px; /* baseline grid */
+    	/*border: 1px #aaa dotted;*/
+    	padding: 0 18px 0 0; /* using same width for gutters between subcolumns */
+    }
+
+    .subcolumns .subcolumns .subcr {
+    	/* Do not repeat margin for nested subcolumns */
+    	padding-right: 0px;
+    }
+
+    #col1_content { 
+    	padding-bottom: 18px;
+    }
+
+    #col3_content { 
+    	margin: 0 0 0 18px; 
+    	/* 
+    	For fixed width content, this container's margins should be
+    	set so its width can be divided by the number of subcolumns 
+    	that we need.
+
+    	In this case, its left margin just happens to be the same number
+    	as the baseline grid, which results in the the container being
+    	exactly 752px wide, which can be divided by 2, 4, 8 and 16, so we 
+    	can use pretty much any number of subcolumns and they are going to 
+    	line up nicely. */
+    }
+
+    #col1, #col3 {
+    	/* Let's show off the grid */
+    /*	background-image: url(../../img/grid.png);*/
+    }
+
+    /*
+    4. Define all other font sizes relative, in em. 
+    */
+
+    /*
+    Forms
+    */
+
+    textarea, input {
+    	padding: 0;
+    }
+
+    #main form label {
+    /*	float: left;
+    	width: 20%;
+    	display: block;*/
+    }
+
+    #main form li label {
+    /*	float: none;
+    	width: auto;
+    	display: inline;*/
+    }
+
+    #main form p {
+    /*    float: none;
+        clear: both;*/
+    }
+
+    #main form ul.errorlist {
+    	margin-bottom: 0;
+    }
+
+
+    /*
+    Figures
+    */
+
+    .figure p {
+    }
+
+    .figure .caption {
+    	font-size: .9em;
+    	color: #B0B0B0;
+    }
+
+    /*
+    Other elements
+    */
+
+    .figure {
+        display: inline-block;
+    	position: relative;
+        overflow: hidden;
+    }
+
+    .figure .image {
+        display: block;
+    }
+
+    .figure .caption {
+    	position: absolute;
+    	line-height: 18px;
+    	height: 18px;
+    	padding-left: 8px;
+    	bottom: 0px;
+    	color: white;
+    	font-size: .9em;
+        background: url(../../img/bg-black-50.png);
+        width: 100%;
+        display: block;
+    }
+
+    .start #teaser {
+    	height: 350px;
+    }
+
+    #teaser .figure .caption {
+    	position: absolute;
+    	width: 970px;
+    	height: 30px;
+    	line-height: 30px;
+    	padding-left: 16px;
+    	color: white;
+    }
+
+    .gallery .nav ul, #panorama-full-pager {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .gallery .nav li, #panorama-full-pager li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: left;
+    }
+
+    .gallery .nav {
+        float: none;
+        clear: both;
+        margin-bottom: 18px;
+    }
+
+    .gallery li.button a, .gallery .pager li a, #panorama-full-pager li a {
+        display: block;
+        margin-right: .25em;
+        padding: 0 .25em;
+        text-align: center;
+    }
+
+    .gallery .folders a.selected, #panorama-full-pager li a.selected {
+        color: black;
+        font-weight: bold;
+    }
+
+    .gallery .pager li a.activeSlide {
+        background: #DDD;
+    }
+
+    .panoramas ul {
+        list-style-type: none;
+        margin-left: 0;a
+        padding-left: 0;
+    }
+
+    .panoramas li {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .ui-widget-overlay {
+        background: black;
+        opacity: .75;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    #panorama-full {
+        background: white;
+    }
+
+    #panorama-full-title {
+        float: left;
+        margin: 0 .5em;
+    }
+
+    #panorama-full-pager {
+        float: right;
+        margin: 0;
+    }
+
+    .ui-dialog-titlebar {
+        display: none;
+    }
+
+    /* Media Tree */
+
+    .file-list, .file-list li {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .file-list li li {
+        margin-left: 1em;
+    }
+
+    a.pdf {
+        background: url(../../../media_tree/img/icons/mimetypes/inline/pdf.png) no-repeat;
+        padding-left: 20px;
+        display: inline-block;
+    }
+
+    /* Form Designer */
+    form label {
+        display: block;
+        width: 25%;
+    }
+    form .required {
+        font-weight: bold;
+    }
+
+    form .required:after { 
+        content: "*"; 
+    }
+
+
+
+
+
+    ul.nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul.nav li {
+        float: left;
+    }
+
+    ul.nav {
+        float: none;
+        clear: both;
+    }
+
+    #footer {
+        position: relative;
+        padding: 20px;
+    }
+
+    #footer ul.nav {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        margin: 20px 0px;
+    }
+
+    #footer p {
+    }
+
+    table td {
+        width: 100%;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    td.nav {
+        white-space: nowrap;
+    }
+
+    #main {
+        z-index: 0;
+    }
+
+    #header {
+        z-index: 100;
+    }
+
+    #nav-main ul {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+    }
+
+    #nav-main li ul {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-main li:hover ul {
+        display: block;
+    }
+
+    #nav-main li li {
+        float: none;
+        clear: both;
+        line-height: 24px;
+        list-style-type: none;
+    }
+
+    #nav-main li li a {
+        font-weight: bold;
+    }
+
+    #nav-main li:hover ul {
+    }
+
+    #nav-main li {
+        margin: 0 1px 0 0;
+        padding: 0;
+        line-height: 35px;
+    }
+
+    #nav-main a {
+        font-weight: bold;
+        display: block;
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+
+    #nav-main li.active a, #nav-main li:hover a, #nav-main ul ul {
+        color: #2f2f2f;
+    }
 
-  p.icaption_left { float:left; display:inline; margin:0 1em 0.15em 0; }
-  p.icaption_right { float:right; display:inline; margin:0 0 0.15em 1em; }
 
-  p.icaption_left img,
-  p.icaption_right img { padding:0; border:1px #efefef solid; }
-
-  p.icaption_left strong,
-  p.icaption_right strong { display:block; overflow:hidden; margin-top:2px; padding:0.3em 0.5em; background:#eee; font-weight:normal; font-size:91.667%; }
-
- /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Generic Content Classes
-  *
-  * (en) standard classes for positioning and highlighting
-  * (de) Standardklassen zur Positionierung und Hervorhebung
-  *
-  * @section content-generic-classes
-  */
-
-  .highlight { color:#c30; }
-  .dimmed { color:#efefef; }
-
-  .info { background:#f8f8f8; color:#666; padding:10px; margin-bottom:0.5em; font-size:91.7%; }
-
-  .note { background:#efe; color:#040; border:2px #484 solid; padding:10px; margin-bottom:1em; }
-  .important { background:#ffe; color:#440; border:2px #884 solid; padding:10px; margin-bottom:1em; }
-  .warning { background:#fee; color:#400; border:2px #844 solid; padding:10px; margin-bottom:1em; }
-
-  .float_left { float:left; display:inline; margin-right:1em; margin-bottom:0.15em; }
-  .float_right { float:right; display:inline; margin-left:1em; margin-bottom:0.15em; }
-  .center { display:block; text-align:center; margin:0.5em auto; }
-
- /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Tables | Tabellen
-  *
-  * (en) Generic classes for table-width and design definition
-  * (de) Generische Klassen für die Tabellenbreite und Gestaltungsvorschriften für Tabellen
-  *
-  * @section content-tables
-  */
-
-  table { width:auto; border-collapse:collapse; margin-bottom:0.5em; border-top:2px #efefef solid; border-bottom:2px #efefef solid; background: #f9f9f9; }
-  table caption { font-variant:small-caps; }
-  table.full { width:100%; }
-  table.fixed { table-layout:fixed; }
-
-  th,td { padding:.5em .5em .5em 0em; }
-  thead th { color:#000; border-bottom:2px #efefef solid; }
-  tbody th { background:#e0e0e0; color:#333; }
-  tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
-
-  tbody th { border-bottom:1px solid #fff; text-align:left; }
-  tbody td { border-bottom:1px solid #eee; }
-
-  tbody tr:hover th[scope="row"],
-  tbody tr:hover tbody th.sub { background: #fff36b; }
-  tbody tr:hover td { background: #fff36b; }
-
- /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Miscellaneous | Sonstiges
-  *
-  * @section content-misc
-  */
-
- /**
-  * (en) Emphasizing external Hyperlinks via CSS
-  * (de) Hervorhebung externer Hyperlinks mit CSS
-  *
-  * @section             content-external-links
-  * @app-yaml-default    disabled
-  */
-
-  /*
-  #main a[href^="http://www.my-domain.com"],
-  #main a[href^="https://www.my-domain.com"]
-  {
-    padding-left:12px;
-    background-image:url('your_image.gif');
-    background-repeat:no-repeat;
-    background-position:0 0.45em;
-  }
-  */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-    font-family: "lucida grande", "lucida sans unicode", tahoma, verdana, arial, sans-serif;
-}
-
-ul.nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-ul.nav li {
-    float: left;
-}
-
-ul.nav {
-    float: none;
-    clear: both;
-}
-
-#footer {
-    position: relative;
-    padding: 20px;
-}
-
-#footer ul.nav {
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    margin: 20px 0px;
-}
-
-#footer p {
-}
-
-table td {
-    width: 100%;
-}
-
-td {
-    vertical-align: top;
-}
-
-td.nav {
-    white-space: nowrap;
-}
-
-#main {
-    z-index: 0;
-}
-
-#header {
-    z-index: 100;
-}
-
-#nav-main li ul {
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-
-#nav-main li:hover ul {
-    display: block;
-}
-
-#nav-main li li {
-    float: none;
-    clear: both;
-    line-height: 24px;
-    list-style-type: none;
-}
-
-#nav-main li li a {
-    font-weight: normal;
-}
-
-#nav-main li:hover ul {
-}
-
-#nav-main li {
-    margin: 0 1px 0 0;
-    padding: 0;
-    line-height: 35px;
-}
-
-#nav-main a {
-    color: white;
-    font-weight: bold;
-    display: block;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#nav-main li.active, #nav-main li:hover, #nav-main ul ul {
-    background: #2f2f2f;
 }

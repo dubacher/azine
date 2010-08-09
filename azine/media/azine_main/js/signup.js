@@ -1,23 +1,27 @@
 $(document).ready(function() {
-    var loadContent = function(data) {
-        $('#signUpDialog').html(data);
-    };
-    var postSignup = function() {
-        $.post("signup/", $("#signupForm").serialize(), loadContent);
-    };
+    // If this is not the signup page:
+    if ($('#signupForm').length == 0) {    
+        var loadContent = function(data) {
+            $('#signUpDialog').html($(data).find('#content-main'));
+        };
 
-    var $dialog = $('<div id="signUpDialog"></div>')
-        .dialog({
-            autoOpen: false,
-            title: 'Sign Up',
-            buttons: { "Signup": postSignup }
+        var postSignup = function() {
+            //$.post("signup/", $("#signupForm").serialize(), loadContent);
+            $('#signupForm').submit();
+        };
+
+        var $dialog = $('<div id="signUpDialog"></div>')
+            .dialog({
+                autoOpen: false,
+                title: 'Sign Up',
+                buttons: { "Signup": postSignup }
+            });
+
+        $('#signup').click(function(event) {
+            event.preventDefault()
+            $dialog.dialog('open');
         });
-
-    $('#signup').click(function() {
-        $dialog.dialog('open');
-        // prevent the default action, e.g., following a link
-        return false;
-    });
-    $.get('signup/', loadContent);
-
+    
+        $.get($('#signup').attr('href'), loadContent);
+    }
 });

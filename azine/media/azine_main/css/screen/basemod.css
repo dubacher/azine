@@ -27,7 +27,10 @@
    * @valid CSS3
    */
 
-  body { overflow-y:scroll; }
+  body { 
+      overflow-y:scroll; 
+      background: #f0f0f0 url(../../img/body-bg.png) 50% 50% repeat-y;
+  }
 
   /*------------------------------------------------------------------------------------------------------*/
   
@@ -47,16 +50,25 @@
 
   /* (en) Layout:width, background, borders */
   /* (de) Layout:Breite, Hintergrund, Rahmen */
-  .page_margins { min-width:740px; max-width:80em; background:#fff; }
+  .page_margins { min-width:1024px; max-width:1024px; }
   .page { padding: 0; }
+  .page_bg {
+    background: url(../../img/header-bg-wide.png) repeat-x;
+  }
 
   /* (en) Designing main layout elements */
   /* (de) Gestaltung der Hauptelemente des Layouts */
 
   #header {
     color: white;
-    background: #555555;
-    padding:45px 2em 5px 20px;
+    background: url(../../img/header-bg.png);
+    height: 90px;
+  }
+  
+  #logo {
+      height: 90px;
+      background: url(../../img/header-bg-left.png) no-repeat;
+      padding: 0 32px;
   }
 
   #topnav { color:#aaa; background:transparent; }
@@ -65,17 +77,21 @@
   /* (de) Anpassung der Hauptnavigation */
   #nav-main { 
     position: absolute;
-    top: 57px;
-    left: 250px;
+    top: 0px;
+    right: 0px;
+    height: 90px;
+    width: 520px;
+    background: url(../../img/header-bg-right.png) right no-repeat;
   }
 
-  #main { background:#fff;padding:10px 0; }
+  #main { padding: 0 22px; }
 
   #footer {
     color:#666;
     background:#f9f9f9;
     border-top:5px #efefef solid;
     line-height:1.5em;
+    margin: 0 22px;
   }
 
   /*------------------------------------------------------------------------------------------------------*/
@@ -95,14 +111,14 @@
    */
 
 
-  #col1 { width:25%; }
+  #col1 { width:0%; }
   #col1_content { padding:10px 10px 10px 20px; }
 
-  #col2 { width:25%; }
+  #col2 { width:0%; }
   #col2_content { padding:10px 20px 10px 10px; }
 
-  #col3 { margin:0 25%; }
-  #col3_content { padding:10px; }
+  #col3 { margin:0 0%; }
+  #col3_content {  }
 
  /**
   * ------------------------------------------------------------------------------------------------- #

@@ -1,0 +1,7 @@
+{% if personal_message %}
+{{ personal_message }}
+
+--------
+
+{% endif %}
+Blah

@@ -6,12 +6,12 @@
 Add a job
 {% endblock %}
 
-{% block heading %}{% trans "Add new job" %}{% endblock %}
+{% block heading %}{% trans "Invite friends" %}{% endblock %}
 
 {% block content %}
 <form method="POST" action="">
 	{{ form.as_p }} 
 	{% csrf_token %}
-	<input type="submit" value="{% trans "Add this job" %}" />
+	<input type="submit" value="{% trans "Send invitations" %}" />
 </form> 
 {% endblock %}

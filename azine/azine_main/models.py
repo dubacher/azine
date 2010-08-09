@@ -2,15 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
 
-
 class UserProfile(models.Model):
     user = models.ForeignKey(User, unique=True)
     first_name = models.CharField(_('first_name'), max_length=255, null=True, blank=False)
     last_name = models.CharField(_('last_name'), max_length=255, null=False, blank=False)
-    signup_date = models.DateField(null=False, blank=False)
-    ip_address = models.CharField(_('ip_address'), max_length=255, null=False, blank=False)
+    ip_address = models.CharField(_('ip_address'), max_length=128, editable=False)
     cv_url = models.URLField()
 
+class Invitation(models.Model):
+    from_user = models.ForeignKey(User, related_name='invitation_from_user', editable=False)
+    to_email = models.EmailField(_('e-mail'))
+    personal_message = models.TextField()
+    created_user = models.ForeignKey(User, editable=False, related_name='invitation_created_user', null=True)
+    invitation_code = models.CharField(max_length=255, editable=False)
+    created = models.DateField(auto_now_add=True)
+    modified = models.DateField(auto_now=True)
 
 class JobState(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)

@@ -9,6 +9,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 
+# TODO!
 @private_user_page
 def index_for_user(request, username):
     user = get_object_or_404(User, username=username)

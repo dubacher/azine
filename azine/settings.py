@@ -90,7 +90,7 @@ MIDDLEWARE_CLASSES = (
 
     'cms.middleware.page.CurrentPageMiddleware', 
     'cms.middleware.user.CurrentUserMiddleware', 
-    'cms.middleware.toolbar.ToolbarMiddleware', 
+    #'cms.middleware.toolbar.ToolbarMiddleware', 
     'cms.middleware.media.PlaceholderMediaMiddleware',
 
     #'django.middleware.cache.FetchFromCacheMiddleware',
@@ -102,7 +102,9 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, 'azine_main/templates'),
     os.path.join(PROJECT_PATH, 'persistent_messages/templates'),
+    os.path.join(PROJECT_PATH, 'user_profiles/templates'),
 )
 
 INSTALLED_APPS = (
@@ -127,6 +129,7 @@ INSTALLED_APPS = (
 
     'cms_columns',
     'persistent_messages',
+    'user_profiles',
 
     'azine_main'
 )
@@ -139,7 +142,7 @@ CMS_PLUGIN_PROCESSORS = (
     'cms_columns.cms_plugin_processors.columns',
 )
 LOGIN_REDIRECT_URL = (
-    '/job/index/'
+    '/'
 )
 
 LOGIN_URL = (
@@ -149,6 +152,9 @@ LOGIN_URL = (
 AUTH_PROFILE_MODULE = (
    'azine_main.UserProfile'
 )
+
+#from azine_main import forms
+#USER_PROFILES_SIGNUP_FORM = SignupForm
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -160,3 +166,4 @@ URL_REDIRECTS = (
 )
 
 MESSAGE_STORAGE = 'persistent_messages.storage.PersistentMessageStorage'
+
