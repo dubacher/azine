@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^job/$', 'azine_main.views.job_view.index', name='job_index'),
     url(r'^profile/(.*?)/applications/$', 'azine_main.views.application_view.index_for_user', name='application_index_for_user'),
     url(r'^rss/latest/jobs/$', LatestEntriesFeed()),
-    url(r'^invitation/add/$', 'azine_main.views.invitation_views.add'),
+    url(r'^invitation/add/$', 'azine_main.views.invitation_views.add', name='invitation_add'),
 
 )
 

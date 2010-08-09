@@ -1,3 +1,4 @@
+from user_profiles.utils import get_class_from_path
 from user_profiles import settings as app_settings
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -14,15 +15,17 @@ from django.core.exceptions import PermissionDenied
 from django.contrib import messages
 
 SIGNUP_SUCCESS_URL = None
+SIGNUP_FORM_CLASS = get_class_from_path(app_settings.SIGNUP_FORM)
+PROFILE_FORM_CLASS = get_class_from_path(app_settings.PROFILE_FORM)
 
 def signup(request):
     if request.user.is_authenticated():
         return HttpResponseRedirect(settings.LOGIN_REDIRECT_URL)
     if request.method == 'POST':
-        signup_form = app_settings.SIGNUP_FORM(request.POST)
+        signup_form = SIGNUP_FORM_CLASS(request.POST)
         if signup_form.is_valid():
             new_user = signup_form.save()
-            user_profile_form = app_settings.PROFILE_FORM(request.POST, instance=new_user.get_profile())
+            user_profile_form = PROFILE_FORM_CLASS(request.POST, instance=new_user.get_profile())
             try:
                 user_profile_form.save()
                 messages.success(request, _('Signup was successful. You can now log in.'))
@@ -32,7 +35,7 @@ def signup(request):
                 new_user.delete()
                 raise e
     else:
-        signup_form = app_settings.SIGNUP_FORM(initial=request.GET)
+        signup_form = SIGNUP_FORM_CLASS(initial=request.GET)
     context_dict = {
         'form': signup_form
     }
@@ -55,9 +58,9 @@ def change(request, username):
     if request.method == 'POST':
         try:
             profile = request.user.get_profile()
-            form = app_settings.PROFILE_FORM(request.POST, instance=profile)
+            form = PROFILE_FORM_CLASS(request.POST, instance=profile)
         except:
-            form = app_settings.PROFILE_FORM(request.POST)        
+            form = PROFILE_FORM_CLASS(request.POST)        
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.INFO, _('Your changes were saved.'))
@@ -65,9 +68,9 @@ def change(request, username):
     else:
         try:
             profile = request.user.get_profile()
-            form = app_settings.PROFILE_FORM(instance=profile)
+            form = PROFILE_FORM_CLASS(instance=profile)
         except:
-            form = app_settings.PROFILE_FORM()
+            form = PROFILE_FORM_CLASS()
     
     context_dict = {
         'form' : form

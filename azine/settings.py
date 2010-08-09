@@ -146,15 +146,15 @@ LOGIN_REDIRECT_URL = (
 )
 
 LOGIN_URL = (
-    '/login/'
+    '/user/login/'
 )
 
 AUTH_PROFILE_MODULE = (
    'azine_main.UserProfile'
 )
 
-#from azine_main import forms
-#USER_PROFILES_SIGNUP_FORM = SignupForm
+USER_PROFILES_SIGNUP_FORM = 'azine_main.forms.SignupForm'
+USER_PROFILES_AUTHENTICATION_FORM = 'azine_main.forms.AuthenticationForm'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

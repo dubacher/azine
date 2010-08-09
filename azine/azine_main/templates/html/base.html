@@ -49,12 +49,13 @@
                             <li><a href="{% url user_profile_change request.user.username %}">{% trans "Edit your profile" %}</a></li>
                             <li><a href="{% url application_index_for_user request.user.username %}">{% trans "Your applications" %}</a></li>
                             <li><a href="{% url password_change %}">{% trans "Change password" %}</a></li>
+                            <li><a href="{% url invitation_add  %}">{% trans "Invite friends" %}</a></li>
                             <li><a href="{% url django.contrib.auth.views.logout_then_login %}">{% trans "Log out" %}</a></li>
                         </ul>
                     </li>
                     {% else %}
                     <li><a id="login" href="{% url login %}">{% trans "Log in" %}</a></li>
- 										<li><a id="signup" href="{% url signup %}">{% trans "Register" %}</a></li>
+ 										<li><a id="signup" href="{% url signup %}">{% trans "Sign up" %}</a></li>
                     {% endif %}
                 </ul>
             </div>

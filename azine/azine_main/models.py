@@ -1,22 +1,30 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
+from random_id import random_id
+
+INVITATION_CODE_LENGTH = 10
 
 class UserProfile(models.Model):
-    user = models.ForeignKey(User, unique=True)
-    first_name = models.CharField(_('first_name'), max_length=255, null=True, blank=False)
-    last_name = models.CharField(_('last_name'), max_length=255, null=False, blank=False)
+    user = models.ForeignKey(User, unique=True, editable=False)
+    first_name = models.CharField(_('first_name'), max_length=255, null=True, blank=True)
+    last_name = models.CharField(_('last_name'), max_length=255, null=True, blank=True)
     ip_address = models.CharField(_('ip_address'), max_length=128, editable=False)
-    cv_url = models.URLField()
+    cv_url = models.URLField(null=True, blank=True)
 
 class Invitation(models.Model):
     from_user = models.ForeignKey(User, related_name='invitation_from_user', editable=False)
     to_email = models.EmailField(_('e-mail'))
-    personal_message = models.TextField()
+    personal_message = models.TextField(_('personal message'), null=True, blank=True)
     created_user = models.ForeignKey(User, editable=False, related_name='invitation_created_user', null=True)
-    invitation_code = models.CharField(max_length=255, editable=False)
-    created = models.DateField(auto_now_add=True)
-    modified = models.DateField(auto_now=True)
+    invitation_code = models.CharField(max_length=INVITATION_CODE_LENGTH, editable=False)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        if not self.invitation_code:
+            self.invitation_code = random_id(INVITATION_CODE_LENGTH)
+        super(Invitation, self).save(*args, **kwargs)
 
 class JobState(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)
@@ -41,8 +49,8 @@ class Job(models.Model):
     end_date = models.DateField(null=True, blank=True, ) # Enddatum des Engagements
     fte = models.IntegerField() #min_value=0, max_value=100) # Stellenprozente
     # attachment: { type: string(255), notnull: false } # Name eines allfaelligem Attachments
-    created = models.DateField(auto_now_add=True)
-    modified = models.DateField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
     
     def __unicode__(self):
         return self.title

@@ -7,10 +7,10 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = get_user_profile_model()
 
-class SignupFormBase(forms.Form):
-    username = forms.CharField(required=True, max_length=16)
-    password = forms.CharField(required=True, widget=forms.widgets.PasswordInput)
-    password_confirm = forms.CharField(required=True, widget=forms.widgets.PasswordInput)
+class SignupForm(forms.Form):
+    username = forms.CharField(label=_('username'), required=True, max_length=30)
+    password = forms.CharField(label=_('Password'), required=True, max_length=128, widget=forms.widgets.PasswordInput)
+    password_confirm = forms.CharField(label=_('Password confirmation'), help_text=_('Please enter your password again to verify you typed it in correctly.'), required=True, widget=forms.widgets.PasswordInput)
 
     class Meta:
         model = User
@@ -33,17 +33,3 @@ class SignupFormBase(forms.Form):
         if commit:
             new_user.save()
         return new_user
-
-class SignupForm(SignupFormBase):
-    username = forms.EmailField(required=True, max_length=16, label=_('e-Mail address'))
-    invitation_code = forms.CharField(required=True)
-    password = forms.CharField(required=True, widget=forms.widgets.PasswordInput, min_length=6)
-    password_confirm = forms.CharField(required=True, widget=forms.widgets.PasswordInput)
-    first_name = forms.CharField(max_length=255, required=False) 
-    last_name = forms.CharField(max_length=255, required=False) 
-
-    def __init__(self, *args, **kwargs):
-        super(SignupForm, self).__init__(*args, **kwargs)
-        if 'initial' in kwargs and 'invitation_code' in kwargs['initial'] and kwargs['initial']['invitation_code']:
-            self.fields['invitation_code'].widget = forms.HiddenInput()
-        

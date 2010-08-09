@@ -1,6 +1,7 @@
 from django.core.exceptions import ImproperlyConfigured
 from django.contrib.auth.models import SiteProfileNotAvailable
 from django.db import models
+from django.utils.importlib import import_module
 
 def get_user_profile_model():
     """
@@ -27,3 +28,16 @@ def get_user_profile_model():
         return model
     except (ImportError, ImproperlyConfigured):
         raise SiteProfileNotAvailable
+
+def get_class_from_path(path):
+    i = path.rfind('.')
+    module, attr = path[:i], path[i+1:]
+    try:
+        mod = import_module(module)
+    except ImportError, e:
+        raise ImproperlyConfigured('Error importing module %s: "%s"' % (module, e))
+    try:
+        func = getattr(mod, attr)
+    except AttributeError:
+        raise ImproperlyConfigured('Module "%s" does not define a class "%s"' % (module, attr))
+    return func

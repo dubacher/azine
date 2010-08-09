@@ -1,9 +1,11 @@
+from user_profiles import settings as app_settings
+from user_profiles.utils import get_class_from_path
 from django.conf.urls.defaults import *
 from django.contrib.auth import views as auth_views
 
 urlpatterns = patterns('',
     url(r'^user/signup/$', 'user_profiles.views.signup', name='signup'),
-    url(r'^user/login/$', auth_views.login, {'template_name': 'user_profiles/login.html'}, name='login'),
+    url(r'^user/login/$', auth_views.login, {'template_name': 'user_profiles/login.html', 'authentication_form': get_class_from_path(app_settings.AUTHENTICATION_FORM)}, name='login'),
     url(r'^user/logout/$', auth_views.logout_then_login, name='logout'),
     url(r'^user/pwd/reset/$', auth_views.password_reset, name='password_reset', kwargs={'template_name': 'user_profiles/password_reset_form.html'}),
     url(r'^user/pwd/reset/done/$', auth_views.password_reset_done, kwargs={'template_name': 'user_profiles/password_reset_done.html'}),
