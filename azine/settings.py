@@ -127,6 +127,8 @@ INSTALLED_APPS = (
     'publisher',
     'menus',
 
+    'django_extensions',
+
     'cms_columns',
     'persistent_messages',
     'user_profiles',
@@ -167,3 +169,8 @@ URL_REDIRECTS = (
 
 MESSAGE_STORAGE = 'persistent_messages.storage.PersistentMessageStorage'
 
+AUTHENTICATION_BACKENDS = (
+    'azine_main.auth.EmailAsUsernameModelBackend',
+)
+
+USER_PROFILES_URL_FIELD = 'userprofile__hash'

@@ -13,7 +13,9 @@ urlpatterns = patterns('',
     url(r'^user/pwd/reset/complete/$', auth_views.password_reset_complete, kwargs={'template_name': 'user_profiles/password_reset_complete.html'}),
     url(r'^user/pwd/change/$', auth_views.password_change, name='password_change', kwargs={'template_name': 'user_profiles/password_change_form.html'}),
     url(r'^user/pwd/change/done/$', auth_views.password_change_done, kwargs={'template_name': 'user_profiles/password_change_done.html'}),
-    url(r'^profile/(.*?)/change/$', 'user_profiles.views.change', name='user_profile_change'),
-    url(r'^profile/(.*?)/$', 'user_profiles.views.detail', name='user_detail'),
+    #url(r'^profile/(.*?)/change/$', 'user_profiles.views.change', name='user_profile_change'),
+    url(r'^profile/you/change/$', 'user_profiles.views.current_user_profile_change', name='current_user_profile_change'),
+    url(r'^profile/you/$', 'user_profiles.views.current_user_detail', name='current_user_detail'),
+    url(r'^profile/(.*?)/$', 'user_profiles.views.user_detail', name='user_detail'),
 )
 

@@ -11,10 +11,9 @@ from django.contrib.auth.decorators import login_required
 
 # TODO!
 @private_user_page
-def index_for_user(request, username):
-    user = get_object_or_404(User, username=username)
+def index_for_current_user(request):
     context_dict = {
-        'applications': Application.objects.filter(applicant=user)
+        'applications': Application.objects.filter(applicant=request.user)
     }
     return render_to_response('html/azine_main/application/index.html', 
         context_dict, context_instance=RequestContext(request))

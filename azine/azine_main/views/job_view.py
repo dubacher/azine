@@ -17,7 +17,6 @@ class JobForm(forms.ModelForm):
 
 @login_required
 def add(request):
-
     if request.method == 'POST':
         form = JobForm(request.POST)
         if form.is_valid():
@@ -31,7 +30,6 @@ def add(request):
     context_dict = {
         'form': form
     }
-                             
     return render_to_response('html/azine_main/job/add.html', 
         context_dict, context_instance=RequestContext(request))
 

@@ -1,4 +1,4 @@
-from user_profiles.utils import get_class_from_path
+from user_profiles.utils import get_class_from_path, getattr_field_lookup
 from user_profiles import settings as app_settings
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -42,9 +42,7 @@ def signup(request):
     return render_to_response('user_profiles/signup.html', 
         context_dict, context_instance=RequestContext(request))
 
-@login_required
-def detail(request, username):
-    user = get_object_or_404(User, username=username)
+def _user_detail(request, user):
     context_dict = {
         'user' : user
     }
@@ -52,22 +50,31 @@ def detail(request, username):
         context_dict, context_instance=RequestContext(request))
 
 @login_required
-def change(request, username):
-    if username != request.user.username:
-        raise PermissionDenied
+def user_detail(request, lookup_value):
+    kwargs = {app_settings.URL_FIELD: lookup_value}
+    return _user_detail(request, get_object_or_404(User, **kwargs))
+
+@login_required
+def current_user_detail(request):
+    return _user_detail(request, request.user)
+
+def _user_change(request, user):
     if request.method == 'POST':
         try:
-            profile = request.user.get_profile()
+            profile = user.get_profile()
             form = PROFILE_FORM_CLASS(request.POST, instance=profile)
         except:
             form = PROFILE_FORM_CLASS(request.POST)        
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.INFO, _('Your changes were saved.'))
-            return HttpResponseRedirect(reverse('user_detail', args=[request.user.username,]))
+            if user != request.user:
+                return HttpResponseRedirect(reverse('user_detail', args=[getattr_field_lookup(user, app_settings.URL_FIELD)]))
+            else:
+                return HttpResponseRedirect(reverse('current_user_detail'))
     else:
         try:
-            profile = request.user.get_profile()
+            profile = user.get_profile()
             form = PROFILE_FORM_CLASS(instance=profile)
         except:
             form = PROFILE_FORM_CLASS()
@@ -78,3 +85,7 @@ def change(request, username):
     
     return render_to_response('user_profiles/profile/change.html',
         context_dict, context_instance=RequestContext(request))
+
+@login_required
+def current_user_profile_change(request):
+    return _user_change(request, request.user)

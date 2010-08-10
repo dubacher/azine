@@ -2,15 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
 from random_id import random_id
+import md5
 
 INVITATION_CODE_LENGTH = 10
 
 class UserProfile(models.Model):
+    hash = models.CharField(max_length=32, editable=False)
     user = models.ForeignKey(User, unique=True, editable=False)
     first_name = models.CharField(_('first_name'), max_length=255, null=True, blank=True)
     last_name = models.CharField(_('last_name'), max_length=255, null=True, blank=True)
     ip_address = models.CharField(_('ip_address'), max_length=128, editable=False)
     cv_url = models.URLField(null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        self.hash = md5.new(self.user.username).hexdigest()
+        super(UserProfile, self).save(*args, **kwargs)
 
 class Invitation(models.Model):
     from_user = models.ForeignKey(User, related_name='invitation_from_user', editable=False)

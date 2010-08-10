@@ -41,3 +41,11 @@ def get_class_from_path(path):
     except AttributeError:
         raise ImproperlyConfigured('Module "%s" does not define a class "%s"' % (module, attr))
     return func
+
+def getattr_field_lookup(obj, lookup):
+    path = lookup.split('__')
+    attr = path.pop()
+    for item in path:
+        manager = getattr(obj, item+'_set')
+        obj = manager.all()[0]
+    return getattr(obj, attr)

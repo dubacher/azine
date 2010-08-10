@@ -33,21 +33,21 @@
                 <span><a href="#">Login</a> | <a href="#">Contact</a> | <a href="#">Imprint</a></span> 
             </div>
             -->
-						<div id="logo">
+            <div id="logo">
             	<h1><a href="/"><img src="{{ MEDIA_URL }}azine_main/img/header-logo.png"></a></h1>
             </div>
-						<!-- begin: main navigation #nav -->
+            <!-- begin: main navigation #nav -->
             <div id="nav-main"  role="navigation">
                 <ul class="nav">
                     <!--<li><a href="/">{% trans "Home" %}</a></li>-->
                     <!--<li class="active"><a href="{% url job_index %}">Jobs</a></li>-->
-										<li><a href="#">About</a></li>
-										<li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help</a></li>
                     {% if not request.user.is_anonymous %}
-                    <li><a href="{% url user_detail request.user.username %}">{{ request.user.username }}</a>
+                    <li><a href="{% url current_user_detail %}">{{ request.user.username }}</a>
                         <ul>
-                            <li><a href="{% url user_profile_change request.user.username %}">{% trans "Edit your profile" %}</a></li>
-                            <li><a href="{% url application_index_for_user request.user.username %}">{% trans "Your applications" %}</a></li>
+                            <li><a href="{% url current_user_profile_change %}">{% trans "Edit your profile" %}</a></li>
+                            <li><a href="{% url application_index_for_current_user %}">{% trans "Your applications" %}</a></li>
                             <li><a href="{% url password_change %}">{% trans "Change password" %}</a></li>
                             <li><a href="{% url invitation_add  %}">{% trans "Invite friends" %}</a></li>
                             <li><a href="{% url django.contrib.auth.views.logout_then_login %}">{% trans "Log out" %}</a></li>
@@ -55,7 +55,7 @@
                     </li>
                     {% else %}
                     <li><a id="login" href="{% url login %}">{% trans "Log in" %}</a></li>
- 										<li><a id="signup" href="{% url signup %}">{% trans "Sign up" %}</a></li>
+                    <li><a id="signup" href="{% url signup %}">{% trans "Sign up" %}</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -121,17 +121,17 @@
                 <div id="col3_content" class="clearfix">
 
                     <div id="content-main">
-											{% include "persistent_messages/message/includes/messages.jquery.html" %}
+                        {% include "persistent_messages/message/includes/messages.jquery.html" %}
                         <!--<h2>{% block heading %}{% endblock %}</h2>-->
-											{% if request.user.is_authenticated %}
-	                      {% placeholder "content-authenticated" or %}
-	                      	{% placeholder "content" %}
-												{% endplaceholder %}
-											{% else %}
-                      	{% placeholder "content" %}
-											{% endif %}
-	                    {% block content %}{% endblock %}
-											</div>
+                        {% if request.user.is_authenticated %}
+                            {% placeholder "content-authenticated" or %}
+                                {% placeholder "content" %}
+                            {% endplaceholder %}
+                        {% else %}
+                            {% placeholder "content" %}
+                        {% endif %}
+                        {% block content %}{% endblock %}
+                    </div>
 
                 </div>
                 <div id="ie_clearing">&nbsp;</div>
