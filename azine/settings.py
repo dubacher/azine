@@ -114,7 +114,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
 
-    #'south',
+    'south',
 
     'cms',
     'cms.plugins.text',

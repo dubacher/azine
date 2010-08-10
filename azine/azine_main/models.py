@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
 from random_id import random_id
-import md5
+import hashlib
 
 INVITATION_CODE_LENGTH = 10
 
@@ -15,7 +15,7 @@ class UserProfile(models.Model):
     cv_url = models.URLField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        self.hash = md5.new(self.user.username).hexdigest()
+        self.hash = hashlib.md5(self.user.username).hexdigest()
         super(UserProfile, self).save(*args, **kwargs)
 
 class Invitation(models.Model):

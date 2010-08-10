@@ -7,7 +7,7 @@ from user_profiles import forms as user_profiles_forms
 import re
 
 class AuthenticationForm(auth_forms.AuthenticationForm):
-    username = forms.EmailField(required=True, max_length=30, label=_('e-Mail address'))
+    username = forms.CharField(required=True, max_length=30, label=_('e-Mail address'))
 
 class SignupForm(user_profiles_forms.SignupForm):
     username = forms.EmailField(required=True, max_length=30, label=_('e-Mail address'), help_text=_('Your e-Mail address is your username.'))
