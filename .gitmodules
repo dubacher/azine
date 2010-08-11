@@ -7,3 +7,6 @@
 [submodule "django-cms-columns"]
 	path = django-cms-columns
 	url = git://github.com/philomat/django-cms-columns.git
+[submodule "django-user-profiles"]
+	path = django-user-profiles
+	url = git@github.com:philomat/django-user-profiles.git
