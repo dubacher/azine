@@ -162,7 +162,7 @@
     }
 
     #col3_content {
-    	padding-top: 18px; 
+    	padding-top: 24px; 
     }
 
     #nav {
@@ -232,11 +232,6 @@
     /*    float: none;
         clear: both;*/
     }
-
-    #main form ul.errorlist {
-    	margin-bottom: 0;
-    }
-
 
     /*
     Figures
@@ -379,18 +374,6 @@
         display: inline-block;
     }
 
-    /* Form Designer */
-    form label {
-        display: block;
-        width: 25%;
-    }
-    form .required {
-        font-weight: bold;
-    }
-
-    form .required:after { 
-        content: "*"; 
-    }
 
 
 
@@ -493,5 +476,9 @@
         color: #2f2f2f;
     }
 
+
+    #col3 {
+        background: url(../../img/grid.png);
+    }
 
 }

@@ -127,8 +127,6 @@ INSTALLED_APPS = (
     'publisher',
     'menus',
 
-    'django_extensions',
-
     'cms_columns',
     'persistent_messages',
     'user_profiles',
