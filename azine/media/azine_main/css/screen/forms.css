@@ -26,9 +26,9 @@ input {
 
 .errorlist li {
     background: #ffc73c;
-    margin: 0px 0 0 160px;
     padding: 4px 9px;
     width: 204px;
+    margin: 0px 0 0 160px;
 }
 
 form .required {

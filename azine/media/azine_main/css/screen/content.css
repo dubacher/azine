@@ -201,7 +201,7 @@
 
     #col1, #col3 {
     	/* Let's show off the grid */
-    /*	background-image: url(../../img/grid.png);*/
+    	/* background-image: url(../../img/grid.png); */
     }
 
     /*
@@ -477,8 +477,5 @@
     }
 
 
-    #col3 {
-        background: url(../../img/grid.png);
-    }
 
 }
