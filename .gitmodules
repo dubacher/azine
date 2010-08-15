@@ -9,7 +9,7 @@
 	url = git://github.com/philomat/django-cms-columns.git
 [submodule "django-user-profiles"]
 	path = django-user-profiles
-	url = git@github.com:philomat/django-user-profiles.git
+	url = git://github.com/philomat/django-user-profiles.git
 [submodule "django-form-designer"]
 	path = django-form-designer
 	url = git://github.com/philomat/django-form-designer.git
