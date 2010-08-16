@@ -1,6 +1,6 @@
 # Django settings for azine project.
 import socket, os
-DEV = socket.gethostname() in ('sam-imac.local', 'sam-macbookpro.local', 'your-host-here')
+DEV = socket.gethostname() in ('sam-imac.local', 'sam-macbookpro.local', 'Macintosh-3.local')
 
 DEBUG = DEV
 TEMPLATE_DEBUG = DEBUG

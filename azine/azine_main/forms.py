@@ -4,6 +4,7 @@ from azine_main.models import Invitation
 from django import forms
 from django.contrib.auth import forms as auth_forms
 from user_profiles import forms as user_profiles_forms
+from azine_main import mail
 import re
 
 class AuthenticationForm(auth_forms.AuthenticationForm):
@@ -61,6 +62,8 @@ class InvitationForm(forms.ModelForm):
         for email in email_addresses:
             invitation_data['to_email'] = email
             invitation = Invitation(**invitation_data)
-            # TODO if send email:
             invitation.from_user = from_user
             invitation.save()
+            mail.sendmail('Invitation', [email])
+
+ 
