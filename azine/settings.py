@@ -69,11 +69,12 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.auth', 
-    'django.core.context_processors.debug', 
-    'django.core.context_processors.i18n', 
-    'django.core.context_processors.media', 
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
     'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
     'cms.context_processors.media',
 )
 
