@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
@@ -13,6 +14,12 @@ class UserProfile(models.Model):
     last_name = models.CharField(_('last_name'), max_length=255, null=True, blank=True)
     ip_address = models.CharField(_('ip_address'), max_length=128, editable=False)
     cv_url = models.URLField(null=True, blank=True)
+
+    def __unicode__(self):
+        if self.first_name and self.last_name:
+            return '%(first_name)s %(last_name)s' % {'first_name': self.first_name, 'last_name': self.last_name}
+        else:
+            return self.user.username.split('@')[0]+u'@…'
 
     def save(self, *args, **kwargs):
         self.hash = hashlib.md5(self.user.username).hexdigest()

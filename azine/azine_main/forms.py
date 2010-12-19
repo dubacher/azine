@@ -1,6 +1,7 @@
 from azine_main.models import Invitation
-from django.utils.translation import ugettext_lazy as _
 from azine_main.models import Invitation
+from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 from django import forms
 from django.contrib.auth import forms as auth_forms
 from user_profiles import forms as user_profiles_forms
@@ -22,19 +23,21 @@ class SignupForm(user_profiles_forms.SignupForm):
             self.fields['invitation_code'].widget = forms.HiddenInput()
 
     def clean_invitation_code(self):
-        invitation = Invitation.objects.filter(invitation_code=self.cleaned_data['invitation_code'])
-        if not invitation.exists():
-            raise forms.ValidationError(_('This invitation code is not valid.'))
-        elif not invitation.filter(created_user=None).exists():
-            raise forms.ValidationError(_('This invitation code has already been used.'))
+        if not settings.DEV:
+            invitation = Invitation.objects.filter(invitation_code=self.cleaned_data['invitation_code'])
+            if not invitation.exists():
+                raise forms.ValidationError(_('This invitation code is not valid.'))
+            elif not invitation.filter(created_user=None).exists():
+                raise forms.ValidationError(_('This invitation code has already been used.'))
         return self.cleaned_data['invitation_code']
 
     def save(self, *args, **kwargs):
         user = super(SignupForm, self).save(*args, **kwargs)
-        if user:
-            invitation = Invitation.objects.get(invitation_code=self.cleaned_data['invitation_code'])
-            invitation.created_user = user
-            invitation.save()
+        if not settings.DEV:
+            if user:
+                invitation = Invitation.objects.get(invitation_code=self.cleaned_data['invitation_code'])
+                invitation.created_user = user
+                invitation.save()
         return user
 
 class InvitationForm(forms.ModelForm):

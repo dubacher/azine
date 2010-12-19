@@ -13,7 +13,7 @@ urlpatterns = patterns('',
 
     (r'^messages/', include('persistent_messages.urls')),
 
-    url(r'^', include('user_profiles.urls')),
+    url(r'^user/', include('user_profiles.urls')),
     url(r'^', include('cms.urls')),
 )
 

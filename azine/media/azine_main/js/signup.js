@@ -1,6 +1,9 @@
 $(document).ready(function() {
     // If this is not the signup page:
-    if ($('#signupForm').length == 0) {    
+    if ($('#signupForm').length == 0) {
+        
+        return;
+            
         var loadContent = function(data) {
             $('#signUpDialog').html($(data).find('#content-main'));
         };
