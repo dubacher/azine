@@ -14,7 +14,7 @@ MANAGERS = ADMINS
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
-DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'azine'             # Or path to database file if using sqlite3.
 DATABASE_USER = 'root'             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
@@ -115,7 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
 
-    'south',
+    #'south',
 
     'cms',
     'cms.plugins.text',
@@ -131,8 +131,8 @@ INSTALLED_APPS = (
     'cms_columns',
     'persistent_messages',
     'user_profiles',
+    'azine_main',
 
-    'azine_main'
 )
 
 CMS_TEMPLATES = (
@@ -150,9 +150,7 @@ LOGIN_URL = (
     '/user/login/'
 )
 
-AUTH_PROFILE_MODULE = (
-   'azine_main.UserProfile'
-)
+AUTH_PROFILE_MODULE = 'azine_main.UserProfile'
 
 USER_PROFILES_SIGNUP_FORM = 'azine_main.forms.SignupForm'
 USER_PROFILES_AUTHENTICATION_FORM = 'azine_main.forms.AuthenticationForm'

@@ -42,14 +42,15 @@
                     <!--<li class="active"><a href="{% url job_index %}">Jobs</a></li>-->
                     <li><a href="#">About</a></li>
                     <li><a href="#">Help</a></li>
+                    <li><a href="#">asd</a></li>
                     {% if not request.user.is_anonymous %}
-                    <li><a href="{% url current_user_detail %}">{{ request.user.get_profile }}</a>
+                    <li><a href="{% url current_user_detail %}">{{ request.user }}</a>
                         <ul>
                             <li><a href="{% url current_user_profile_change %}">{% trans "Edit your profile" %}</a></li>
                             <li><a href="{% url application_index_for_current_user %}">{% trans "Your applications" %}</a></li>
                             <li><a href="{% url password_change %}">{% trans "Change password" %}</a></li>
                             <li><a href="{% url invitation_add  %}">{% trans "Invite friends" %}</a></li>
-                            <li><a href="{% url django.contrib.auth.views.logout_then_login %}">{% trans "Log out" %}</a></li>
+                            <li><a href="{% url logout %}">{% trans "Log out" %}</a></li>
                         </ul>
                     </li>
                     {% else %}
