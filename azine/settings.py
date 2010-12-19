@@ -1,8 +1,8 @@
 # Django settings for azine project.
 import socket, os
-DEV = socket.gethostname() in ('sam-imac.local', 'sam-macbookpro.local', 'Macintosh-3.local')
+DEV = socket.gethostname() in ('sam-imac.local', 'sam-macbookpro.local', 'fry.local')
 
-DEBUG = DEV
+DEBUG = DEV 
 TEMPLATE_DEBUG = DEBUG
 gettext = lambda s: s
 
@@ -14,7 +14,7 @@ MANAGERS = ADMINS
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
-DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_ENGINE = 'mysql'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'azine'             # Or path to database file if using sqlite3.
 DATABASE_USER = 'root'             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
