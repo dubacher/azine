@@ -14,16 +14,19 @@ At the moment the idea is to provide migration facilities for the azine_main app
 There is a script in the scripts folder called "db.sh" which provides different commands to ease the migration and creation of fixtures.
 
 Scenario 1: The model has been changed
-1. execute the script with command "migration" which creates a migration definition
-2. execute the script with command "migrate" to migrate your own db
-3. execute the script with command "fixture" to update the fixture
+1. execute command "migration" which creates a migration definition
+2. execute command "migrate" to migrate your own db
+3. execute command "fixture" to update the fixture
 
 Scenario 2: You pull new version from repository.
-1. execute the script with command "migrate". In case model the model has been changed by other developer your db will be migrated with the migration definition the other developer created.
+1. execute command "migrate". In case model the model has been changed by other developer your db will be migrated with the migration definition the other developer created.
 2. (optionally) update your db with command "load". Attention: This will flush the whole db and reinit it with the fixture.
 
 Scenario 3: You entered new data which has to be in the fixture
-1. execute the script with comman "fixture" to update the fixture.
+1. execute command "fixture" to update the fixture.
+
+Scenario 4: You know that you have an up-to-date db and just want to bring south to the current state
+1. execute command "fake-migrate".
 
 Fixtures:
 ---------

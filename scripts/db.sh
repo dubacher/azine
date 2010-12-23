@@ -22,6 +22,7 @@ then
 	echo "fixture -> Creates a fixture of the current database"
 	echo "migrate -> executes migration"
 	echo "load -> loads the dumps into the database"
+	echo "fake-migrate -> does not a real migration but brings south in-sync again"
 	echo
 	read command
 else
@@ -58,8 +59,14 @@ load ()
 	do
 		./manage.py loaddata ./fixtures/$dump
 	done
+	./manage.py migrate azine_main --fake
 }
 
+fake-migrate ()
+{
+	echo "Start fake migration"
+	./manage.py migrate azine_main --fake
+}
 
 
 
@@ -72,6 +79,8 @@ case "$command" in
 		migrate;;
 	"load")
 		load;;
+	"fake-migrate")
+		fake-migrate;;
 esac
 
 exit
