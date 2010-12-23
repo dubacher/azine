@@ -1,0 +1,40 @@
+Fixture/Migration-Strategy:
+---------------------------
+1. Provide fixtures
+2. Provide migration
+
+The azine app is composed of various apps (azine_main, cms etc.). From this apps azine_main is the main app to be developed. The other apps are regarded as libraries.
+
+At the moment the idea is to provide migration facilities for the azine_main app only. When it comes to fixtures the following fixtures will be created:
+- cms app
+- cms text plugin
+- auth
+- azine_main
+
+There is a script in the scripts folder called "db.sh" which provides different commands to ease the migration and creation of fixtures.
+
+Scenario 1: The model has been changed
+1. execute the script with command "migration" which creates a migration definition
+2. execute the script with command "migrate" to migrate your own db
+3. execute the script with command "fixture" to update the fixture
+
+Scenario 2: You pull new version from repository.
+1. execute the script with command "migrate". In case model the model has been changed by other developer your db will be migrated with the migration definition the other developer created.
+2. (optionally) update your db with command "load". Attention: This will flush the whole db and reinit it with the fixture.
+
+Scenario 3: You entered new data which has to be in the fixture
+1. execute the script with comman "fixture" to update the fixture.
+
+Fixtures:
+---------
+Create and Load fixtures:
+Dump all data of an app: manage.py dumpdata --indent=2 app-name  > ./fixtures/app-name.json
+Load all data of all apps: manage.py loaddata ./fixtures/app-name.json
+(For cms.plugin.text it is "manage.py dumpdate --indent=2 cms text > ./fixtures/app-name.json)
+
+South:
+------
+Init South: ./manage.py schemamigration azine_main --initial
+Apply migration: ./manage.py migrate azine_main
+Converting an exisitng App to use south: ./manage.py convert_to_south azine_main
+Create Migration when model changes:./manage.py schemamigration azine_main --auto

@@ -26,27 +26,4 @@ Installation South
 Cron-Job-Library for Django:
 - http://code.google.com/p/django-cron/
 
-Create and Load fixtures:
-Dump all data of an APP: manage.py dumpdata --indent=2 app-name  > ./app-name/fixtures/bootstrap.json
-Load all data of an APP: manage.py loaddata bootstrap.json
 
-Dump data of cms: manage.py dumpdata cms > ./cms/fixtures/bootstrap.json
-Load data of cms: manage.py loaddata bootstrap.json
-
-(For cms.plugin.text it is "manage.py dumpdate cms text > ./cms/fixtures/bootstrap.json)
-
-Database Migrations:
---------------------
-For the one who gets a migration:
-1. Possibility
-- Migrate with south
-2. Possibility
-> ./manage.py flush
-> ./manage.py syncdb
-> ./manage.py loaddata bootstrap
-
-For the one who 
-1. Possiblity
-- Migrate data using south
-- If tables are changed which have an impact on the fixture then perform a datadump
-> ./manage.py dumpdata --indent=2  cms cms text > ./cms/fixtures/bootstrap.json
