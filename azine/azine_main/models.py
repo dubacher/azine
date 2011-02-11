@@ -2,28 +2,57 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _, ugettext
+from django.core.validators import RegexValidator
+from user_profiles.models import UserProfileBase
 from random_id import random_id
 import hashlib
 
 INVITATION_CODE_LENGTH = 10
+ZIP_VALIDATOR = RegexValidator(r'^[0-9]{4}$');
+PHONE_VALIDATOR = RegexValidator(r'^[0-9\(\)\+\ ]{10,}$');
 
-class UserProfile(models.Model):
-    hash = models.CharField(max_length=32, editable=False)
-    user = models.ForeignKey(User, unique=True, editable=False)
-    first_name = models.CharField(_('first_name'), max_length=255, null=True, blank=True)
-    last_name = models.CharField(_('last_name'), max_length=255, null=True, blank=True)
-    ip_address = models.CharField(_('ip_address'), max_length=128, editable=False)
-    cv_url = models.URLField(null=True, blank=True)
 
-    def __unicode__(self):
-        if self.first_name and self.last_name:
-            return '%(first_name)s %(last_name)s' % {'first_name': self.first_name, 'last_name': self.last_name}
-        else:
-            return self.user.username.split('@')[0]+u'@…'
+class AcceptField(models.BooleanField):
+    def formfield(self, **kwargs):
+        kwargs['required'] = True
+        return super(AcceptField, self).formfield(**kwargs)
 
-    def save(self, *args, **kwargs):
-        self.hash = hashlib.md5(self.user.username).hexdigest()
-        super(UserProfile, self).save(*args, **kwargs)
+
+class ContactInformation(UserProfileBase):
+    user = models.ForeignKey(User, verbose_name=_('user'), editable=False)
+    company = models.CharField(_('company'), max_length=255, null=True, blank=True)
+    title = models.CharField(_('title'), max_length=64, editable=False, blank=True) #choices=settings.USER_CONTACT_TITLE_CHOICES
+    first_name = models.CharField(_('first name'), max_length=30)
+    last_name = models.CharField(_('last name'), max_length=30)
+    function = models.CharField(_('function'), max_length=255, blank=True, null=True, help_text=_('e.g. consulting engineers, agent'))
+    email = models.EmailField(_('email'), max_length=75)
+    email_activated = models.BooleanField(_('email activated'), default=False, editable=False)
+    website = models.URLField(null=True, blank=True)
+    address1 = models.CharField(_('address'), max_length=255)
+    address2 = models.CharField(_('address line 2'), max_length=255, null=True, blank=True)
+    zip = models.CharField(_('zip'), max_length=6, validators=[ZIP_VALIDATOR,])
+    city = models.CharField(_('city'), max_length=255)
+    phone = models.CharField(_('phone'), max_length=255, validators=[PHONE_VALIDATOR,], null=True, blank=True)
+    phone_mobile = models.CharField(_('phone (mobile)'), max_length=255, validators=[PHONE_VALIDATOR,], null=True, blank=True)
+    fax = models.CharField(_('fax'), max_length=255, validators=[PHONE_VALIDATOR,], null=True, blank=True)
+    created_by = models.ForeignKey(User, null=True, blank=True, related_name='%(class)s_created_by', verbose_name=_('created by'), editable=False)
+    modified_by = models.ForeignKey(User, null=True, blank=True, related_name='%(class)s_modified_by', verbose_name=_('modified by'), editable=False)
+    created = models.DateTimeField(_('created'), auto_now_add=True)
+    modified = models.DateTimeField(_('modified'), auto_now=True)
+    is_visible = models.BooleanField(editable=False, default=True)
+    is_user_profile = models.BooleanField(_('is user profile'), editable=False, default=False)
+
+    accept_terms = models.BooleanField(_('Yes, I accept the %(terms_of_service_link)s'), null=False, blank=False)
+    #AcceptField(_('Yes, I accept the %(terms_of_service_link)s'), null=False, blank=False)
+
+    email_info = models.BooleanField(_('Yes, I would like to receive email notifications'), editable=True, default=True)
+
+
+class UserProfile(ContactInformation):
+    class Meta:
+        proxy = True
+
+
 
 class Invitation(models.Model):
     from_user = models.ForeignKey(User, related_name='invitation_from_user', editable=False)

@@ -1,15 +1,15 @@
-[submodule "django-cms"]
-	path = django-cms
-	url = git://github.com/philomat/django-cms-2.0.git
 [submodule "django-persistent-messages"]
 	path = django-persistent-messages
 	url = git://github.com/philomat/django-persistent-messages.git
-[submodule "django-cms-columns"]
-	path = django-cms-columns
-	url = git://github.com/philomat/django-cms-columns.git
 [submodule "django-user-profiles"]
 	path = django-user-profiles
 	url = git://github.com/philomat/django-user-profiles.git
 [submodule "django-form-designer"]
 	path = django-form-designer
 	url = git://github.com/philomat/django-form-designer.git
+[submodule "django-cms"]
+	path = django-cms
+	url = git://github.com/divio/django-cms.git
+[submodule "django-mptt"]
+	path = django-mptt
+	url = git://github.com/django-mptt/django-mptt.git

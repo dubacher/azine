@@ -87,6 +87,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     
+    'user_profiles.middleware.CurrentUserMiddleware', 
     'azine_main.middleware.redirect.UrlRedirectMiddleware',
 
     'cms.middleware.page.CurrentPageMiddleware', 
@@ -125,14 +126,11 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'mptt',
-    'publisher',
     'menus',
 
-    'cms_columns',
     'persistent_messages',
     'user_profiles',
     'azine_main',
-
 )
 
 CMS_TEMPLATES = (
@@ -140,7 +138,6 @@ CMS_TEMPLATES = (
 )
 
 CMS_PLUGIN_PROCESSORS = (
-    'cms_columns.cms_plugin_processors.columns',
 )
 LOGIN_REDIRECT_URL = (
     '/'
@@ -152,8 +149,8 @@ LOGIN_URL = (
 
 AUTH_PROFILE_MODULE = 'azine_main.UserProfile'
 
-USER_PROFILES_SIGNUP_FORM = 'azine_main.forms.SignupForm'
-USER_PROFILES_AUTHENTICATION_FORM = 'azine_main.forms.AuthenticationForm'
+USER_PROFILES_SIGNUP_FORM = 'azine_main.forms.user.SignupForm'
+USER_PROFILES_AUTHENTICATION_FORM = 'azine_main.forms.user.AuthenticationForm'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

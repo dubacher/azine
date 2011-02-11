@@ -9,9 +9,11 @@ Add a job
 {% block heading %}{% trans "Add new job" %}{% endblock %}
 
 {% block content %}
-<form method="POST" action="">
-	{{ form.as_p }} 
+<form id="{{ form.attrs.id }}" method="POST" action="">
+    {% include "form_utils/better_form_tabbed.html" %}
 	{% csrf_token %}
-	<input type="submit" value="{% trans "Add this job" %}" />
+    <div class="form-buttons">
+        <input type="submit" value="{% trans "Add job" %}
+    </div>
 </form> 
 {% endblock %}
