@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _, ugettext
 from django.core.validators import RegexValidator
 from user_profiles.models import UserProfileBase
 from random_id import random_id
+from mptt.models import MPTTModel
 import hashlib
 
 INVITATION_CODE_LENGTH = 10
@@ -53,7 +54,6 @@ class UserProfile(ContactInformation):
         proxy = True
 
 
-
 class Invitation(models.Model):
     from_user = models.ForeignKey(User, related_name='invitation_from_user', editable=False)
     to_email = models.EmailField(_('e-mail'))
@@ -68,11 +68,25 @@ class Invitation(models.Model):
             self.invitation_code = random_id(INVITATION_CODE_LENGTH)
         super(Invitation, self).save(*args, **kwargs)
 
+
 class JobState(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)
 
     def __unicode__(self):
         return self.name
+
+
+class Skill(MPTTModel):
+    name = models.CharField(max_length=50)
+    parent = models.ForeignKey('self', null=True, blank=True, related_name='children')
+
+    class MPTTMeta:
+        order_insertion_by = ['name']
+        unique_together = ('name', 'parent')
+
+    def __unicode__(self):
+        return self.name
+
         
 class Job(models.Model):
     
@@ -96,6 +110,7 @@ class Job(models.Model):
     
     def __unicode__(self):
         return self.title
+
     
 class Application(models.Model):
     
@@ -117,6 +132,3 @@ class Application(models.Model):
 
     def __unicode__(self):
         return ugettext('%(user)s applied for %(job)s' % {'user': self.applicant.__unicode__(), 'job': self.job.__unicode__()})
-        
-
-

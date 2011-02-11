@@ -1,10 +1,14 @@
 from django.contrib import admin
-from azine_main.models import Job, JobState, Application, Invitation
+from azine_main.models import Job, JobState, Skill, Application, Invitation
+from mptt.admin import MPTTModelAdmin
 
 class JobAdmin(admin.ModelAdmin):
     pass
 
 class JobStateAdmin(admin.ModelAdmin):
+    pass
+
+class SkillAdmin(MPTTModelAdmin):
     pass
 
 class ApplicationAdmin(admin.ModelAdmin):
@@ -19,5 +23,6 @@ class InvitationAdmin(admin.ModelAdmin):
     
 admin.site.register(Job, JobAdmin)
 admin.site.register(JobState, JobStateAdmin)
+admin.site.register(Skill, SkillAdmin)
 admin.site.register(Application, ApplicationAdmin)
 admin.site.register(Invitation, InvitationAdmin)
