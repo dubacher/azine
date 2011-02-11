@@ -10,3 +10,6 @@
 [submodule "django-mptt"]
 	path = django-mptt
 	url = git://github.com/django-mptt/django-mptt.git
+[submodule "django-user-profiles"]
+	path = django-user-profiles
+	url = git://github.com/philomat/django-user-profiles.git
