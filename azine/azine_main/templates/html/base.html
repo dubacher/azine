@@ -42,7 +42,6 @@
                     <!--<li class="active"><a href="{% url job_index %}">Jobs</a></li>-->
                     <li><a href="#">About</a></li>
                     <li><a href="#">Help</a></li>
-                    <li><a href="#">asd</a></li>
                     {% if not request.user.is_anonymous %}
                     <li><a href="{% url current_user_detail %}">{{ request.user }}</a>
                         <ul>
