@@ -1,0 +1,50 @@
+{% load i18n %}
+{% block media %}
+{{ form.media }}
+{% endblock %}
+
+{% block errors %}
+{% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+{% endblock %}
+
+{% block before_fields %}
+{% endblock %}
+
+{% block fields %}
+{% if form.fieldsets %}
+	{% for fieldset in form.fieldsets %}
+	<fieldset class="{{ fieldset.classes }}" id="{{ fieldset.name|slugify }}">
+	{% if fieldset.legend %}
+	<legend>{{ fieldset.legend }}</legend>
+	{% endif %}
+	{% for field in fieldset %}
+	{% include "includes/field_as_p.html" %}
+	{% endfor %}
+	</fieldset>
+	{% endfor %}
+{% else %}
+	{% for field in form %}
+	{% include "includes/field_as_p.html" %}
+	{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block after_fields %}
+{% block submit_message %}
+{% if submit_message %}
+<ul class="messages">
+    <li class="{{ submit_message.tags }}">{{ submit_message }}</li>
+</ul>
+{% endif %}
+{% endblock %}
+
+<ul class="nav horizontal">
+{% block submit %}
+{% if submit_label %}<li><input type="submit" value="{% trans submit_label %}" /></li>{% endif %}
+{% endblock %}
+</ul>
+{% endblock %}
+
+{% block form_footer %}
+<p class="details required-message">{% trans "The marked fields are required." %}</p>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "form_utils/better_form.html" %}
+{% load i18n %}
+
+{% block before_fields %}
+<div class="floatbox form-tabbed">
+<ul class="script-only">
+    {% for fieldset in form.fieldsets %}
+    <li><a href="#{{ fieldset.name|slugify }}">{{ fieldset.legend }}</a></li>
+    {% endfor %}
+</ul>
+
+{% block submit_message %}{{ block.super }}{% endblock %}
+
+<ul class="nav horizontal clearfix">
+	{% if prev_next %}
+	<li><input type="button" class="prev-button" value="{% trans "previous" %}" style="display: none;" /></li>
+	<li><input type="button" class="next-button" value="{% trans "next" %}" style="display: none;" /></li>
+	{% endif %}
+	{% block submit %}
+	<li>{{ block.super }}</li>
+	{% endblock %}
+</ul>
+{% endblock %}
+
+{% block after_fields %}
+</div>
+{% endblock %}
+
+{% block fields %}
+
+{{ block.super }} 
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+    var tabbed = $('#{{ form.attrs.id }}');
+    tabbed.tabs();
+    console.log(tabbed.tabs);
+    
+    var selectFormFieldInTab = function(tabIndex, fieldIndex) {
+        var fieldContainer = $($($('fieldset')[tabIndex]).children(':not(legend)')[fieldIndex]);
+        tabbed.tabs('select', tabIndex);
+        $(fieldContainer.find('input, select, textarea')[0]).focus();
+    }
+
+    var fieldsetErrors = [{% spaceless %}
+        {% for fieldset in form.fieldsets %}
+            {% if not forloop.first %}, {% endif %}[
+            {% for field in fieldset %}
+                {% if not forloop.first %}, {% endif %}{% if field.errors %}true{% else %}false{% endif %}
+            {% endfor %}
+        ]
+        {% endfor %}
+    {% endspaceless %}];
+    
+    {% if form.fieldset or form.field %}
+    // Focus input
+    selectFormFieldInTab({% if form.fieldset %}{{ form.fieldset }}{% else %}0{% endif %}, {% if form.field %}{{ form.field }}{% else %}0{% endif %});
+    {% endif %}
+    // Select first tab that contains errors and focus the error input
+    for (var i in fieldsetErrors) {
+        var errorIndex = $.inArray(true, fieldsetErrors[i]);
+        if (errorIndex > -1) {
+            selectFormFieldInTab(parseInt(i), errorIndex);
+            break;
+        }
+    }
+
+    {% if prev_next %}
+    var prevButton = tabbed.find('.prev-button');
+    var nextButton = tabbed.find('.next-button');
+    prevButton.show();
+    nextButton.show();
+    var tabCount = tabbed.tabs('length');
+    
+    var buttonStatus = function(index) {
+        if (index == undefined) {
+            index = tabbed.tabs('option', 'selected');
+        }
+        if (tabCount < 2) {
+            prevButton.hide();
+            nextButton.hide();
+        } else {
+	        if (index > 0) {
+	            prevButton.removeAttr('disabled');
+                prevButton.removeClass('disabled');
+	        } else {
+	            prevButton.attr('disabled', 'disabled');
+                prevButton.addClass('disabled');
+	        }
+	        if (index < tabCount - 1) {
+	            nextButton.removeAttr('disabled');
+                nextButton.removeClass('disabled');
+	            {% if auto_hide_submit %}
+                tabbed.find('input[type=submit]').attr('disabled', 'disabled');
+                tabbed.find('input[type=submit]').addClass('disabled');
+                {% endif %}
+	        } else {
+	            nextButton.attr('disabled', 'disabled');
+                nextButton.addClass('disabled');
+                {% if auto_hide_submit %}
+                tabbed.find('input[type=submit]').removeAttr('disabled');
+                tabbed.find('input[type=submit]').removeClass('disabled');
+                {% endif %}
+	        }
+        }
+    }
+        
+    tabbed.bind('tabsselect', function(event, ui) {
+        buttonStatus(ui.index);
+    });
+    
+    buttonStatus();
+
+    prevButton.click(function(event) {
+       tabbed.tabs('select', tabbed.tabs('option', 'selected') - 1); 
+    });
+    nextButton.click(function(event) {
+       tabbed.tabs('select', tabbed.tabs('option', 'selected') + 1); 
+    });
+    {% endif %}
+});
+//]]>
+</script>
+{% endblock %}
