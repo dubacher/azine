@@ -179,7 +179,8 @@ URL_REDIRECTS = (
 MESSAGE_STORAGE = 'persistent_messages.storage.PersistentMessageStorage'
 
 AUTHENTICATION_BACKENDS = (
-    'azine_main.auth.EmailAsUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+    #'azine_main.auth.EmailAsUsernameModelBackend',
 )
 
 USER_PROFILES_URL_FIELD = 'userprofile__hash'
