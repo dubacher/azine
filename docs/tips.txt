@@ -26,4 +26,8 @@ Installation South
 Cron-Job-Library for Django:
 - http://code.google.com/p/django-cron/
 
+Installation classytags:
+- Download and Install > http://readthedocs.org/docs/django-classy-tags/en/0.3.0/installation.html
 
+Delete just tables of specific app:
+python manage.py sqlclear appname | python manage.py dbshell
